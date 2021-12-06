@@ -15,7 +15,7 @@ hier misschien een link naar een google doc, of plaatjes van wireframes / het af
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor a magna eget tristique. Curabitur fringilla rhoncus magna, a accumsan urna. Maecenas ut tortor placerat ex egestas ornare sed ac dolor. Etiam vitae arcu suscipit, lacinia felis et, fermentum dui. Quisque quis eros vitae lacus ornare accumsan ac vel mi.
 
 ## Project link
-(link hier) [link] - link_hier
+(link hier)[https://www.google.com/] - link_hier
 
 ## Collaborators
 - Jelle
