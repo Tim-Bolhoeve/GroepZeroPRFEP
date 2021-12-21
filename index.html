@@ -12,6 +12,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- CSS-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
@@ -45,124 +48,85 @@
                 </div>
             </header>
             <!-- Tabel of dergelijke-->
-            <section class="py-5" id="features">
-                <div class="container px-5 my-5">
-
-                    <!-- meer info op https://getbootstrap.com/docs/4.0/content/tables/  -->
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col">Oud vak</th>
-                                  <th scope="col">EC oud</th>
-                                  <th scope="col">Nieuw vak</th>
-                                  <th scope="col">EC nieuw</th>
-                                  <th scope="col">Bekijken</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Oud vak naam</td>
-                                  <td>5</td>
-                                  <td>Nieuw vak naam</td>
-                                  <td>10</td>
-                                  <td><a href="#!">Meer...</a></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Oud vak naam</td>
-                                  <td>5</td>
-                                  <td>Nieuw vak naam</td>
-                                  <td>10</td>
-                                  <td><a href="#!">Meer...</a></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Oud vak naam</td>
-                                  <td>5</td>
-                                  <td>Nieuw vak naam</td>
-                                  <td>10</td>
-                                  <td><a href="#!">Meer...</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">5</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">6</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">7</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">8</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">9</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">10</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">11</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">12</th>
-                                    <td>Oud vak naam</td>
-                                    <td>5</td>
-                                    <td>Nieuw vak naam</td>
-                                    <td>10</td>
-                                    <td><a href="#!">Meer...</a></td>
-                                  </tr>
-                              </tbody>
-                        </table>
-                      </div>
-                </div>
-            </section>
+            <br><br>
+            <div class="container">
+              <h2>Bezemvakken</h2>
+              <input class="form-control" id="myInput" type="text" placeholder="Search..">
+              <br>
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Oude Cursuscode</th>
+                    <th>Oud vak</th>
+                    <th>Nieuwe Cursuscode</th>
+                    <th>Nieuw vak</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  <tr>
+                    <td>MBBM-P-BUP1-17</td>
+                    <td>Businessplan Principles 1</td>
+                    <td>MBBU-P-MAVE-18</td>
+                    <td>Marktverkenning</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-PP-17</td>
+                    <td>Persoonlijke professionalisering</td>
+                    <td>MBBU-P-PRVA-20<br>MBBU-P-PRVB-18</td>
+                    <td>Professionele vaardigheden A<br>Professionele vaardigheden B</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-BUP2-17</td>
+                    <td>Businessplan Principles 2</td>
+                    <td>MBBU-P-ORIN-18</td>
+                    <td>Organisatieinrichting</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-BUSK-17</td>
+                    <td>Businesssplan skills</td>
+                    <td>MBBU-P-ENG1-18<br>MBBU-P-PRVA-20</td>
+                    <td>Engels<br>Professionel vaardigheden A</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-ABP1-17</td>
+                    <td>Adviesbureau principles 1</td>
+                    <td>MBBU-P-KETEN-18</td>
+                    <td>Ketenanalyse</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-ABP2-17</td>
+                    <td>Adviesbureau principles 2</td>
+                    <td>MBBU-P-ORVD-18</td>
+                    <td>Organisatieverdieping</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-PBU1-17</td>
+                    <td>Project Businessplan 1</td>
+                    <td>MBBU-P-PROA-20</td>
+                    <td>Project A</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-PBU2-17</td>
+                    <td>Project Businessplan 2</td>
+                    <td>MBBU-P-PROB-18</td>
+                    <td>Project B</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-ASK1-17</td>
+                    <td>Adviesbureau skills 1</td>
+                    <td>MBBU-P-PRVCD-20<br>MBBU-P-ENG1-18</td>
+                    <td>Professionele vaardigheden C & D<br>Engels</td>
+                  </tr>
+                  <tr>
+                    <td>MBBM-P-PAB1-17</td>
+                    <td>Project Adviesbureau 1</td>
+                    <td>MBBU-P-PROC-18</td>
+                    <td>Project C</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br><br>
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
@@ -175,6 +139,18 @@
                 </div>
             </div>
         </footer>
+        <!-- zoekfilter script  -->
+        <script>
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
+
         <!-- Bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!--JS-->
