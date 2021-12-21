@@ -48,11 +48,39 @@
                 </div>
             </header>
             <!-- Tabel of dergelijke-->
-            <br><br>
+
+            <section class="py-4" id="features">
+              <div class="container">
+                  <div class="row gx-5">
+                      <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Zoeken of filteren</h2></div>
+                      <div class="col-lg-10">
+                        <br>
+                          <div class="row gx-5 row-cols-1 row-cols-md-2">
+                              <div class="col mb-5 h-50">
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                                  </div>
+                                  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                                </div>
+                              </div>
+                              <div class="col mb-5 h-50">
+                                  <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggl" id="dropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filter <i class="bi bi-funnel-fill"></i></button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#!a_z">A-Z</a></li>
+                                        <li><a class="dropdown-item" href="#!z_a">Z-A</a></li>
+                                        <li><a class="dropdown-item" href="#!hoog_laag">Hoog-Laag (EC)</a></li>
+                                        <li><a class="dropdown-item" href="#!laag_hoog">Laag-Hoog (EC)</a></li>
+                                    </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
             <div class="container">
-              <h2>Bezemvakken</h2>
-              <input class="form-control" id="myInput" type="text" placeholder="Search..">
-              <br>
               <table class="table table-bordered table-striped">
                 <thead>
                   <tr>
@@ -63,61 +91,61 @@
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                  <tr>
+                  <tr onclick="window.location='#!rij_1';">
                     <td>MBBM-P-BUP1-17</td>
                     <td>Businessplan Principles 1</td>
                     <td>MBBU-P-MAVE-18</td>
                     <td>Marktverkenning</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_2';">
                     <td>MBBM-P-PP-17</td>
                     <td>Persoonlijke professionalisering</td>
                     <td>MBBU-P-PRVA-20<br>MBBU-P-PRVB-18</td>
                     <td>Professionele vaardigheden A<br>Professionele vaardigheden B</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_3';">
                     <td>MBBM-P-BUP2-17</td>
                     <td>Businessplan Principles 2</td>
                     <td>MBBU-P-ORIN-18</td>
                     <td>Organisatieinrichting</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_4';">
                     <td>MBBM-P-BUSK-17</td>
                     <td>Businesssplan skills</td>
                     <td>MBBU-P-ENG1-18<br>MBBU-P-PRVA-20</td>
                     <td>Engels<br>Professionel vaardigheden A</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_5';">
                     <td>MBBM-P-ABP1-17</td>
                     <td>Adviesbureau principles 1</td>
                     <td>MBBU-P-KETEN-18</td>
                     <td>Ketenanalyse</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_6';">
                     <td>MBBM-P-ABP2-17</td>
                     <td>Adviesbureau principles 2</td>
                     <td>MBBU-P-ORVD-18</td>
                     <td>Organisatieverdieping</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_7';">
                     <td>MBBM-P-PBU1-17</td>
                     <td>Project Businessplan 1</td>
                     <td>MBBU-P-PROA-20</td>
                     <td>Project A</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_8';">
                     <td>MBBM-P-PBU2-17</td>
                     <td>Project Businessplan 2</td>
                     <td>MBBU-P-PROB-18</td>
                     <td>Project B</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_9';">
                     <td>MBBM-P-ASK1-17</td>
                     <td>Adviesbureau skills 1</td>
                     <td>MBBU-P-PRVCD-20<br>MBBU-P-ENG1-18</td>
                     <td>Professionele vaardigheden C & D<br>Engels</td>
                   </tr>
-                  <tr>
+                  <tr onclick="window.location='#!rij_10';">
                     <td>MBBM-P-PAB1-17</td>
                     <td>Project Adviesbureau 1</td>
                     <td>MBBU-P-PROC-18</td>
