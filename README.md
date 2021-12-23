@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://i.imgur.com/taIht5e.png" />
-  <h1 style="text-align: center;">Groep Zero</h1>
+  <h1 align="center">Groep Zero</h1>
 </p>
 
 Een project gemaakt door [deze collaborators](#collaborators) voor Project FrontEnd in jaar 2 van de HU
