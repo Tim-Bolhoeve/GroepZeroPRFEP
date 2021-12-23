@@ -1,9 +1,8 @@
 <p align="center">
   <img src="https://i.imgur.com/taIht5e.png" />
-  <h1>Groep Zero</h1>
+  <h1 style="text-align: center;">Groep Zero</h1>
 </p>
 
-# Groep Zero
 Een project gemaakt door [deze collaborators](#collaborators) voor Project FrontEnd in jaar 2 van de HU
 
 ## Casus
