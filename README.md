@@ -1,3 +1,4 @@
+![GroepZero logo](https://i.imgur.com/taIht5e.png)
 # Groep Zero
 Een project gemaakt door [deze collaborators](#collaborators) voor Project FrontEnd in jaar 2 van de HU
 
