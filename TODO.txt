@@ -6,4 +6,6 @@ html lang misschien veranderen van EN naar NL gebaseerd op wat we het meest hebb
 
 pagina's van user stories maken (persoons gebonden)
 
---- Dit is 't tot nu toe ~Tim 29-12-2021
+navbar text en linkjes fixen voor elke pagina (lieft via JS)
+
+--- Dit is 't tot nu toe ~Tim 3-1-2022
