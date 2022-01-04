@@ -18,166 +18,40 @@
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
-            <!-- Navigatie-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html">Groep Zero</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="form.html">Form sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="bezemvak.html">Bezemvak sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nieuwvak.html">Nieuw vak voorstellen</a></li>
-                            <li class="nav-item"><a class="nav-link" href="keuren.html">Keuren</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Inloggen/uitloggen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Header-->
-            <header class="bg-dark py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">Bezemvakken importeren/exporteren</h1>
-                                <p class="lead fw-normal text-white-50 mb-4">Een project van gemaakt door Groep Zero in jaar 2 van de HU</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="img/logo_600x400.png" alt="Groep Zero Logo hoofdpagina" /></div>
-                    </div>
-                </div>
-            </header>
-            <!-- Tabel of dergelijke-->
-
-            <section class="py-4" id="features">
-              <div class="container">
-                  <div class="row gx-5">
-                      <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Zoeken of filteren</h2></div>
-                      <div class="col-lg-10">
-                        <br>
-                          <div class="row gx-5 row-cols-1 row-cols-md-2">
-                              <div class="col mb-5 h-50">
-                                <div class="input-group mb-3">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                                  </div>
-                                  <input class="form-control" id="myInput" type="text" placeholder="Search..">
-                                </div>
-                              </div>
-                              <div class="col mb-5 h-50">
-                                  <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggl" id="dropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filter <i class="bi bi-funnel-fill"></i></button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#!a_z">A-Z</a></li>
-                                        <li><a class="dropdown-item" href="#!z_a">Z-A</a></li>
-                                        <li><a class="dropdown-item" href="#!hoog_laag">Hoog-Laag (EC)</a></li>
-                                        <li><a class="dropdown-item" href="#!laag_hoog">Laag-Hoog (EC)</a></li>
-                                    </ul>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-            <div class="container">
-              <table class="table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>Oude Cursuscode</th>
-                    <th>Oud vak</th>
-                    <th>Nieuwe Cursuscode</th>
-                    <th>Nieuw vak</th>
-                  </tr>
-                </thead>
-                <tbody id="myTable">
-                  <tr onclick="window.location='#!rij_1';">
-                    <td>MBBM-P-BUP1-17</td>
-                    <td>Businessplan Principles 1</td>
-                    <td>MBBU-P-MAVE-18</td>
-                    <td>Marktverkenning</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_2';">
-                    <td>MBBM-P-PP-17</td>
-                    <td>Persoonlijke professionalisering</td>
-                    <td>MBBU-P-PRVA-20<br>MBBU-P-PRVB-18</td>
-                    <td>Professionele vaardigheden A<br>Professionele vaardigheden B</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_3';">
-                    <td>MBBM-P-BUP2-17</td>
-                    <td>Businessplan Principles 2</td>
-                    <td>MBBU-P-ORIN-18</td>
-                    <td>Organisatieinrichting</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_4';">
-                    <td>MBBM-P-BUSK-17</td>
-                    <td>Businesssplan skills</td>
-                    <td>MBBU-P-ENG1-18<br>MBBU-P-PRVA-20</td>
-                    <td>Engels<br>Professionel vaardigheden A</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_5';">
-                    <td>MBBM-P-ABP1-17</td>
-                    <td>Adviesbureau principles 1</td>
-                    <td>MBBU-P-KETEN-18</td>
-                    <td>Ketenanalyse</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_6';">
-                    <td>MBBM-P-ABP2-17</td>
-                    <td>Adviesbureau principles 2</td>
-                    <td>MBBU-P-ORVD-18</td>
-                    <td>Organisatieverdieping</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_7';">
-                    <td>MBBM-P-PBU1-17</td>
-                    <td>Project Businessplan 1</td>
-                    <td>MBBU-P-PROA-20</td>
-                    <td>Project A</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_8';">
-                    <td>MBBM-P-PBU2-17</td>
-                    <td>Project Businessplan 2</td>
-                    <td>MBBU-P-PROB-18</td>
-                    <td>Project B</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_9';">
-                    <td>MBBM-P-ASK1-17</td>
-                    <td>Adviesbureau skills 1</td>
-                    <td>MBBU-P-PRVCD-20<br>MBBU-P-ENG1-18</td>
-                    <td>Professionele vaardigheden C & D<br>Engels</td>
-                  </tr>
-                  <tr onclick="window.location='#!rij_10';">
-                    <td>MBBM-P-PAB1-17</td>
-                    <td>Project Adviesbureau 1</td>
-                    <td>MBBU-P-PROC-18</td>
-                    <td>Project C</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <br><br>
+            <div id="nav-placeholder"></div>
+            <div id="header-placeholder"></div>
+            <div id="zoek-placeholder"></div>
+            <div id="tabel-placeholder"></div>
+            <div class="col-xs-12" style="height:50px;"></div>
         </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Groep Zero 2021/2022</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="https://github.com/Tim-Bolhoeve/GroepZeroPRFEP">Github</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- zoekfilter script  -->
-        <script>
-          $(document).ready(function(){
-            $("#myInput").on("keyup", function() {
-              var value = $(this).val().toLowerCase();
-              $("#myTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-              });
-            });
+        <div id="footer-placeholder"></div>
+
+      <script src="//code.jquery.com/jquery.min.js"></script>
+
+          <script>
+          // navbar inladen
+          $.get("./holders/navbar.html", function(data){
+              $("#nav-placeholder").replaceWith(data);
+          });
+
+          // zoekfilter inladen
+          $.get("./holders/home/zoekfilter.html", function(data){
+              $("#zoek-placeholder").replaceWith(data);
+          });
+
+          // tabel inhoud inladen
+          $.get("./holders/home/tabel.html", function(data){
+              $("#tabel-placeholder").replaceWith(data);
+          });
+
+          // tabel inhoud inladen
+          $.get("./holders/footer.html", function(data){
+              $("#footer-placeholder").replaceWith(data);
+          });
+
+          // header inladen
+          $.get("./holders/home/header.html", function(data){
+              $("#header-placeholder").replaceWith(data);
           });
           </script>
 
