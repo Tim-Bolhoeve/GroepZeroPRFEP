@@ -25,10 +25,11 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home sjabloon</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="form.html">Form sjabloon</a></li>
                             <li class="nav-item"><a class="nav-link" href="bezemvak.html">Bezemvak sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="voorstellen.html">voorstellen sjabloon</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nieuwvak.html">Nieuw vak voorstellen</a></li>
+                            <li class="nav-item"><a class="nav-link" href="keuren.html">Keuren</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Inloggen/uitloggen</a></li>
                         </ul>
                     </div>
@@ -49,18 +50,18 @@
             </header>
             <!-- Tabel of dergelijke-->
 
-        
+            <div class="col-xs-12" style="height:50px;"></div>
+
             <div class="container">
               <table class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th>Naam vak</th>
                     <th>Keuren</th>
-
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                  <tr onclick="window.location='#!rij_1';">
+                  <tr>
                     <td>Businessplan Principles 1</td>
                     <td>
                         <div class="button-box col-lg-12">
@@ -69,7 +70,7 @@
                         </div>
                     </td>
                   </tr>
-                  <tr onclick="window.location='#!rij_2';">
+                  <tr>
                     <td>Persoonlijke professionalisering</td>
                     <td>
                         <div class="button-box col-lg-12">
@@ -78,7 +79,7 @@
                         </div>
                     </td>              
                  </tr>
-                  <tr onclick="window.location='#!rij_3';">
+                  <tr>
                     <td>Businessplan Principles 2</td>
                     <td>
                         <div class="button-box col-lg-12">
@@ -103,18 +104,6 @@
                 </div>
             </div>
         </footer>
-        <!-- zoekfilter script  -->
-        <script>
-          $(document).ready(function(){
-            $("#myInput").on("keyup", function() {
-              var value = $(this).val().toLowerCase();
-              $("#myTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-              });
-            });
-          });
-          </script>
-
         <!-- Bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!--JS-->
