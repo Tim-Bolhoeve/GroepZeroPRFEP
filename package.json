@@ -1,0 +1,30 @@
+{
+  "name": "GroepZeroPRFEP",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <img src=\"https://i.imgur.com/taIht5e.png\" />\r </p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "web-dev-server --node-resolve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tim-Bolhoeve/GroepZeroPRFEP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tim-Bolhoeve/GroepZeroPRFEP/issues"
+  },
+  "homepage": "https://github.com/Tim-Bolhoeve/GroepZeroPRFEP#readme",
+  "dependencies": {
+    "lit": "^2.1.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.29"
+  }
+}
