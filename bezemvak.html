@@ -17,7 +17,19 @@
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
             <div id="nav-placeholder"></div>
-            <div id="header-placeholder"></div>
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Bezemvak (codenaam)</h1>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"></div>
+                    </div>
+                </div>
+            </header>
 
             <div id="cursussen" class="container table-responsive">
                 <h4>Huidig</h4>
@@ -80,11 +92,6 @@
           // footer inladen
           $.get("./holders/footer.html", function(data){
               $("#footer-placeholder").replaceWith(data);
-          });
-
-          // header inladen
-          $.get("./holders/home/header.html", function(data){
-              $("#header-placeholder").replaceWith(data);
           });
           </script>
 
