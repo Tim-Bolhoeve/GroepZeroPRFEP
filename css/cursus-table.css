@@ -9,10 +9,6 @@
     margin-bottom: 25px;
 }
 
-tr:hover{
-    background-color:  #FFFFCC;
-}
-
 .btn-archive {
     width: 15%;
 }
