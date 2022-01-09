@@ -31,8 +31,9 @@
                                 <form id="contactForm" method="#">
                                     
                                     <div class="form-floating mb-3">
-                                        <textarea name="voorstelBeoordeel" id="voorstelBeoordeeltxt" class="form-control-lg" cols="50" rows="10"></textarea>
-                                        <div class="invalid-feedback" data-sb-feedback="code:required">Een code is verplicht.</div>
+                                        <textarea class="form-control" id="message" type="text" placeholder="Voer je bericht in..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <label for="message">Bericht</label>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">Een bericht is verplicht.</div>
                                     </div>
 
                                     <!-- gelukt bericht -->
