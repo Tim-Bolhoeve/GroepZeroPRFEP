@@ -12,127 +12,153 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- CSS-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/cursus-table.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
-            <!-- Navigatie-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div id="nav-placeholder"></div>
+            <!-- Header-->
+            <header class="bg-dark py-5">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html">Groep Zero</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="form.html">Form sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="bezemvak.html">Bezemvak sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nieuwvak.html">Nieuw vak voorstellen</a></li>
-                            <li class="nav-item"><a class="nav-link" href="keuren.html">Keuren</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Inloggen/uitloggen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Page Content-->
-            <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5">
-                        
-                        <!-- uitcomment het deel hieronder en zie wat het doet, misschien heb je er wat aan  -->
-                        <div class="col-lg-3">
-                            <div class="d-flex align-items-center mt-lg-5 mb-4">
-                                <img class="img-fluid rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." />
-                                <div class="ms-3">
-                                    <div class="fw-bold">persoon</div>
-                                    <div class="text-muted">of iets anders</div>
-                                </div>
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Bezemvak (codenaam)</h1>
                             </div>
                         </div>
-                        <!-- tot hier  -->
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"></div>
+                    </div>
+                </div>
+            </header>
 
-                        <div class="col-lg-9">
-                            <article>
-                                <!-- header-->
-                                <header class="mb-4">
-                                    <!-- titel-->
-                                    <h1 class="fw-bolder mb-1">Bezemvakken pagina</h1>
-                                    <!-- datum (en meer?)-->
-                                    <div class="text-muted fst-italic mb-2">21 December, 2021</div>
-                                    <!-- tags-->
-                                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">tag 1</a>
-                                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">tag 2</a>
-                                </header>
-                                <!-- afbeelding -->
-                                <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
-                                <!-- content-->
-                                <section class="mb-5">
-                                    <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <p class="fs-5 mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    <p class="fs-5 mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    <h2 class="fw-bolder mb-4 mt-5">Kopje 2</h2>
-                                    <!-- hier kunnen meer p's maar dat moet je zelf maar bepalen  -->
-                                </section>
-                            </article>
-                            <!-- Comments section-->
-                            <section>
-                                <div class="card bg-light">
-                                    <div class="card-body">
-                                        <!-- Comment form-->
-                                        <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Plaats hier een bericht!"></textarea></form>
-                                        <!-- Comment met nested comments-->
-                                        <div class="d-flex mb-4">
-                                            <!-- Parent comment-->
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">Naam 1</div>
-                                                bericht van persoon 1
-                                                <!-- Child comment 1-->
-                                                <div class="d-flex mt-4">
-                                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                                    <div class="ms-3">
-                                                        <div class="fw-bold">Naam 2</div>
-                                                        reactie van persoon 2
-                                                    </div>
-                                                </div>
-                                                <!-- Child comment 2-->
-                                                <div class="d-flex mt-4">
-                                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                                    <div class="ms-3">
-                                                        <div class="fw-bold">Naam 3</div>
-                                                        reactie van persoon 3 ook op persoon 1
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- losse comment-->
-                                        <div class="d-flex">
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">naam 4</div>
-                                                comment nummer 2
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Groep Zero 2021/2022</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="https://github.com/Tim-Bolhoeve/GroepZeroPRFEP">Github</a>
-                    </div>
-                </div>
+            <div id="cursussen" class="container table-responsive">
+                <h4>Huidig</h4>
+                <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Naam</th>
+                        <th scope="col">EC-cursus</th>
+                        <th scope="col">Toets & Toetsvorm</th>
+                        <th scope="col">Weging</th>
+                        <th scope="col">EC-toets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" scope="row"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h4>Vervangend</h4>
+                <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Naam</th>
+                        <th scope="col">EC-cursus</th>
+                        <th scope="col">Toets & Toetsvorm</th>
+                        <th scope="col">Weging</th>
+                        <th scope="col">EC-toets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3" scope="row"</td>
+                        <td rowspan="3"></td>
+                        <td rowspan="3"></td>
+                    </tr>
+                </tbody>
+                </table>
+                <button type="button" class="btn btn-warning btn-archive">
+                    Archive
+                </button>
             </div>
-        </footer>
+
+            <div class="col-xs-12" style="height:50px;"></div>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+
+          <script>
+          // navbar inladen
+          $.get("./holders/navbar.html", function(data){
+              $("#nav-placeholder").replaceWith(data);
+          });
+
+          // footer inladen
+          $.get("./holders/footer.html", function(data){
+              $("#footer-placeholder").replaceWith(data);
+          });
+          </script>
+
         <!-- Bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!--JS-->
         <script src="js/scripts.js"></script>
     </body>
+    <script type="module">
+        import { courses } from './js/courses.js';
+
+        // Gegevens inladen en plaatsen in tabellen
+        const cursus = courses[0];
+        const replacement = cursus.replacement[0];
+
+        let cursusDiv = document.querySelector('#cursussen');
+
+        let currentCursusTable = cursusDiv.querySelectorAll('table')[0];
+        let currentTd = currentCursusTable.querySelector('tbody').querySelector('tr').querySelectorAll('td');
+        currentTd[0].innerText = cursus.code;
+        currentTd[1].innerText = cursus.name;
+        currentTd[2].innerText = cursus.ec_course;
+
+        let replacementCursusTable = cursusDiv.querySelectorAll('table')[1];
+        let replaceTd = replacementCursusTable.querySelector('tbody').querySelector('tr').querySelectorAll('td');
+        replaceTd[0].innerText = replacement.code;
+        replaceTd[1].innerText = replacement.name;
+        replaceTd[2].innerText = replacement.ec_course;
+
+        // Plaatst de info van de toetsen voor de 1e tabel
+        cursus.tests.forEach((course, index) => {
+            let trElement = document.createElement('tr');
+
+            let testName = document.createElement('td');
+            testName.innerText = course.name;
+
+            let testWeight = document.createElement('td');
+            testWeight.innerText = course.weight;
+
+            let testEC = document.createElement('td');
+            testEC.innerText = course.ec_test;
+
+            trElement.appendChild(testName);
+            trElement.appendChild(testWeight);
+            trElement.appendChild(testEC);
+
+            currentCursusTable.querySelector('tbody').appendChild(trElement);
+        });
+
+        // Plaatst de info van de toetsen voor de 2e tabel
+        replacement.tests.forEach((course, index) => {
+            let trElement = document.createElement('tr');
+
+            let testName = document.createElement('td');
+            testName.innerText = course.name;
+
+            let testWeight = document.createElement('td');
+            testWeight.innerText = course.weight;
+
+            let testEC = document.createElement('td');
+            testEC.innerText = course.ec_test;
+
+            trElement.appendChild(testName);
+            trElement.appendChild(testWeight);
+            trElement.appendChild(testEC);
+
+            replacementCursusTable.querySelector('tbody').appendChild(trElement);
+        });
+    </script>
 </html>
