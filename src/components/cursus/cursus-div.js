@@ -55,6 +55,7 @@ class CursusDiv extends LitElement {
             <link href="styles.css" rel="stylesheet">
             <custom-header>Bezemvak ${this._foundCourse.code}</custom-header>
             <div id="cursussen" class="container table-responsive">
+                <h2>Periode: A,B,C</h2>
                 <cursus-table
                     title="Huidig"
                     .cursus=${this._foundCourse} 
