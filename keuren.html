@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -19,21 +19,7 @@
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
             <!-- Navigatie-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html">Groep Zero</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="form.html">Form sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="bezemvak.html">Bezemvak sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="voorstellen.html">voorstellen sjabloon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Inloggen/uitloggen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <div id="nav-placeholder"></div>
             <!-- Header-->
             <header class="bg-dark py-5">
                 <div class="container px-5">
@@ -49,18 +35,18 @@
             </header>
             <!-- Tabel of dergelijke-->
 
-        
+            <div class="col-xs-12" style="height:50px;"></div>
+
             <div class="container">
               <table class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th>Naam vak</th>
                     <th>Keuren</th>
-
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                  <tr onclick="window.location='#!rij_1';">
+                  <tr>
                     <td>Businessplan Principles 1</td>
                     <td>
                         <div class="button-box col-lg-12">
@@ -69,7 +55,7 @@
                         </div>
                     </td>
                   </tr>
-                  <tr onclick="window.location='#!rij_2';">
+                  <tr>
                     <td>Persoonlijke professionalisering</td>
                     <td>
                         <div class="button-box col-lg-12">
@@ -78,7 +64,7 @@
                         </div>
                     </td>              
                  </tr>
-                  <tr onclick="window.location='#!rij_3';">
+                  <tr>
                     <td>Businessplan Principles 2</td>
                     <td>
                         <div class="button-box col-lg-12">
@@ -93,28 +79,21 @@
             <br><br>
         </main>
         <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Groep Zero 2021/2022</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="https://github.com/Tim-Bolhoeve/GroepZeroPRFEP">Github</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- zoekfilter script  -->
-        <script>
-          $(document).ready(function(){
-            $("#myInput").on("keyup", function() {
-              var value = $(this).val().toLowerCase();
-              $("#myTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-              });
-            });
-          });
-          </script>
+        <div id="footer-placeholder"></div>
 
+        <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <script>
+        // navbar inladen
+        $.get("./holders/navbar.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+
+        // tabel inhoud inladen
+        $.get("./holders/footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+        </script>
         <!-- Bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!--JS-->

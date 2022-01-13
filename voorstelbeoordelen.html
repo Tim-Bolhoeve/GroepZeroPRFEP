@@ -22,31 +22,19 @@
                 <div class="container px-5">
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-circle"></i></div>
-                            <h1 class="fw-bolder">Login</h1>
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-right-text-fill"></i></div>
+                            <h1 class="fw-bolder">Voorstel (id: <a href="#">0001</a>) beoordelen</h1>
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
                                 <!-- form -->
-                                <form id="contactForm" method="index.html">
-                                    <!-- Naam input-->
+                                <form id="contactForm" method="#">
+                                    
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Vul je naam in..." data-sb-validations="required" />
-                                        <label for="name">Gebruikersnaam</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">Een gebruikersnaam is verplicht.</div>
-                                    </div>
-                                    <!-- Email adres input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" placeholder="naam@voorbeeld.com" data-sb-validations="required,email" />
-                                        <label for="email">Email adres</label>
-                                        <div class="invalid-feedback" data-sb-feedback="email:required">Een email is verplicht.</div>
-                                        <div class="invalid-feedback" data-sb-feedback="email:email">Ingevoerde email is ongeldig.</div>
-                                    </div>
-
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="password" placeholder="Voor je wachtwoord in..." data-sb-validations="required" />
-                                        <label for="name">Wachtwoord</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">Een wachtwoord is verplicht.</div>
+                                        <label for="beoordeelbericht"></label>
+                                        <textarea class="form-control" id="beoordeelbericht" type="text" placeholder="Voer je bericht in..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <label for="message">Bericht</label>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">Een bericht is verplicht.</div>
                                     </div>
 
                                     <!-- gelukt bericht -->
@@ -59,7 +47,10 @@
                                     <!-- error bericht  -->
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
                                     <!-- Submit knop-->
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Login</button></div>
+                                    <div class="button-box col-lg-12">
+                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Goedkeuren</button>
+                                        <button class="btn btn-dark btn-lg" id="submitButton" type="submit">Afkeuren</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
