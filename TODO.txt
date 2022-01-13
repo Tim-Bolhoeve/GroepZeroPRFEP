@@ -4,6 +4,8 @@ accesibilty dingetjes toevoegen aan afbeeldingen enzo
 
 html lang misschien veranderen van EN naar NL gebaseerd op wat we het meest hebben (moeten we wel like 80% veranderen)
 
-Drop down knop onder zoekbalk maken
+pagina's van user stories maken (persoons gebonden) - AF: Tim, Damian
 
---- Dit is 't tot nu toe ~Tim 21-12-2021
+navbar text en linkjes fixen voor elke pagina (lieft via JS) - gedaan - TB
+
+--- Dit is 't tot nu toe ~Tim 3-1-2022
