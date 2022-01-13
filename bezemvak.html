@@ -110,7 +110,7 @@
 
         let cursusDiv = document.querySelector('#cursussen');
         let headerCode = document.querySelector('.code');
-        headerCode.querySelector('h1').innerText = `Bezemvak ${cursus.code}`;
+        headerCode.innerText = `Bezemvak ${cursus.code}`;
 
         let currentCursusTable = cursusDiv.querySelectorAll('table')[0];
         let currentTd = currentCursusTable.querySelector('tbody').querySelector('tr').querySelectorAll('td');
