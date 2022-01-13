@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -48,10 +48,15 @@
                                         <div class="invalid-feedback" data-sb-feedback="ec-c:required">Een EC-cursus nummer is verplicht.</div>
                                     </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
-                                        <label for="toets">Toets & Toetsform</label>
-                                        <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
+                                    <div id="toetsen">
+                                        <div class="form-floating mb-3">
+                                            <div class="input-group">
+                                                <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
+                                                <label for="toets">Toets & Toetsform</label>
+                                                <button type="button" class="btn btn-primary btn-circle btn-xl" id="add_toets_field">+</button>
+                                                <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="form-floating mb-3">
@@ -102,6 +107,19 @@
           $.get("./holders/footer.html", function(data){
               $("#footer-placeholder").replaceWith(data);
           });
+
+          // toets input toevoegen
+          var toetsen = document.getElementById('toetsen');
+          var add_toets_field = document.getElementById('add_toets_field');
+
+          add_toets_field.onclick = function(){
+              var nieuwveld = document.createElement('input');
+              nieuwveld.setAttribute('type', 'text');
+              nieuwveld.setAttribute('name', 'toetsen');
+              nieuwveld.setAttribute('class', 'form-control');
+              nieuwveld.setAttribute('placeholder', 'Vul een Toets & toetsvorm in...');
+              toets.appendChild(nieuwveld)
+          }
           </script>
         <!-- Bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
