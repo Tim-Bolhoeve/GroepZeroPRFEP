@@ -53,7 +53,7 @@ class CursusTable extends LitElement {
         return html`
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-            <h4>${this.title}</h4>
+            <h3>${this.title}</h3>
             <table class="table table-bordered">
             <thead class="table-light">
                 <tr>

@@ -1,7 +1,0 @@
-inlog uitlog pagina maken
-
-accesibilty dingetjes toevoegen aan afbeeldingen enzo
-
-html lang misschien veranderen van EN naar NL gebaseerd op wat we het meest hebben (moeten we wel like 80% veranderen)
-
---- Dit is 't tot nu toe ~Tim 21-12-2021
