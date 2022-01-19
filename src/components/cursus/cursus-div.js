@@ -24,9 +24,9 @@ class CursusDiv extends LitElement {
         super.connectedCallback();
 
         let paramList = this.location.params;
-        let cursusCode = paramList.code;
+        this._cursusCode = paramList.code;
 
-        this._getCourseFromCode(cursusCode);
+        this._getCourseFromCode(this._cursusCode);
     }
 
     _archiveCourse() {
@@ -35,8 +35,10 @@ class CursusDiv extends LitElement {
 
     // Pakt de eerst gevonden resultaat op
     _getCourseFromCode(code) {
-        this._foundCourse = courses.find(course => course.code === code);
-        this._replaceCourse = this._foundCourse.replacement[0];
+        if(courses.find(course => course.code === code)) {
+            this._foundCourse = courses.find(course => course.code === code);
+            this._replaceCourse = this._foundCourse.replacement[0];
+        }
     }
 
     static get styles() {
@@ -51,6 +53,15 @@ class CursusDiv extends LitElement {
     }
 
     render() {
+        if(this._foundCourse === undefined) {
+            return html`
+                <div id="cursussen" class="container">
+                    <link href="styles.css" rel="stylesheet">
+                    <h1>Cursus met code: ${this._cursusCode} niet gevonden</h1>
+                </div>
+            `
+        }
+
         return html`
             <link href="styles.css" rel="stylesheet">
             <custom-header>Bezemvak ${this._foundCourse.code}</custom-header>
@@ -71,7 +82,7 @@ class CursusDiv extends LitElement {
                     @onArchive=${this._archiveCourse}
                 ></archive-button>
             </div>
-        `
+        `;
     }
 }
 
