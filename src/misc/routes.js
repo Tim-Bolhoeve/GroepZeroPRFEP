@@ -8,9 +8,8 @@ const router = new Router(outlet);
 
 // Hier worden de componenten geladen
 router.setRoutes([
-    {path: '/', component: 'test-comp'},
+    {path: '/', component: 'home-table'},
     {path: '/cursus/:code', component: 'cursus-div'},
-    {path: '/home', component: 'home-table'},
     {path: '(.*)', component: ''}
 ]);
 

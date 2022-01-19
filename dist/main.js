@@ -195,4 +195,4 @@
                 <cursus-table-home>
                 </cursus-table-home>
             </div>
-        `}});const st=document.querySelector("#main"),it=new Ye(st);it.setRoutes([{path:"/",component:"test-comp"},{path:"/cursus/:code",component:"cursus-div"},{path:"/home",component:"home-table"},{path:"(.*)",component:""}])})();
+        `}});const st=document.querySelector("#main"),it=new Ye(st);it.setRoutes([{path:"/",component:"home-table"},{path:"/cursus/:code",component:"cursus-div"},{path:"(.*)",component:""}])})();
