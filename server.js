@@ -15,5 +15,7 @@ app.get('/*', function(req, res) {
 });
 // app.use('/', express.static(path.join(__dirname, 'public')));
 
+// eerst "npm run build" in de console nadat je wat hebt verandert, daarna "node server.js" in de console
+// om de server te stoppen doe "CTRL+C" in de console en herhaal hierboven
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
