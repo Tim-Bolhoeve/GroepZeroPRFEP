@@ -85,7 +85,7 @@ ___________________________________________________________________________
 
 ## Use case
 
-![image alt text](../../.assets/wiki/images/image_0.png)
+![image alt text](./../.assets/wiki/images/image_0.png)
 
 ## Use case templates
 
@@ -194,13 +194,13 @@ Systeem sluit af</td>
 
 ## Toestandsdiagrammen
 
-![image alt text](image_1.png)
+![image alt text](./../.assets/wiki/images/image_1.png)
 
-![image alt text](image_2.png)
+![image alt text](./../.assets/wiki/images/image_2.png)
 
 ## Klassendiagram
 
-![image alt text](image_3.png)
+![image alt text](./../.assets/wiki/images/image_3.png)
 
 ___________________________________________________________________________
 
@@ -210,7 +210,7 @@ ___________________________________________________________________________
 
 ## Klassendiagram
 
-![image alt text](image_4.png)
+![image alt text](./../.assets/wiki/images/image_4.png)
 
 ## **Bezem vak archiveren**
 
@@ -218,7 +218,7 @@ ___________________________________________________________________________
 
 ### Use case diagram
 
-![image alt text](image_5.png)
+![image alt text](./../.assets/wiki/images/image_5.png)
 
 ### Use case templates
 
@@ -333,7 +333,7 @@ n.v.t.
 
 ### Toestandsdiagram
 
-![image alt text](image_6.png)
+![image alt text](./../.assets/wiki/images/image_6.png)
 
 ## **Gegevens vervangend vak inzien**
 
@@ -343,7 +343,7 @@ n.v.t.
 
 ### Use case diagram
 
-![image alt text](image_7.png)
+![image alt text](./../.assets/wiki/images/image_7.png)
 
 ### Use case template(s)
 
@@ -391,7 +391,7 @@ Postconditie
 
 ### Toestandsdiagram
 
-![image alt text](image_8.png)
+![image alt text](./../.assets/wiki/images/image_8.png)
 
 # Damian
 
@@ -399,7 +399,7 @@ ___________________________________________________________________________
 
 ## Use case
 
-# ![image alt text](image_9.png)
+# ![image alt text](./../.assets/wiki/images/image_9.png)
 
 ## Use case templates
 
@@ -626,15 +626,15 @@ Het systeem sluit af</td>
 
 ## Toestandsdiagrammen
 
-![image alt text](image_10.png)
+![image alt text](./../.assets/wiki/images/image_10.png)
 
-![image alt text](image_11.png)
+![image alt text](./../.assets/wiki/images/image_11.png)
 
-![image alt text](image_12.png)
+![image alt text](./../.assets/wiki/images/image_12.png)
 
 ## Klassendiagram
 
-![image alt text](image_13.png)
+![image alt text](./../.assets/wiki/images/image_13.png)
 
 # Kevin
 
@@ -642,7 +642,7 @@ ___________________________________________________________________________
 
 ## Use case
 
-![image alt text](image_14.png)
+![image alt text](./../.assets/wiki/images/image_14.png)
 
 ## Use case templates
 
@@ -755,11 +755,11 @@ n.v.t
 
 ## Toestandsdiagrammen
 
-![image alt text](image_15.png)
+![image alt text](./../.assets/wiki/images/image_15.png)
 
 ## Klassendiagram
 
-![image alt text](image_16.png)
+![image alt text](./../.assets/wiki/images/image_16.png)
 
 # Ewout
 
@@ -767,7 +767,7 @@ ___________________________________________________________________________
 
 ## Use case
 
-![image alt text](image_17.png)
+![image alt text](./../.assets/wiki/images/image_17.png)
 
 ## Use case templates
 
@@ -915,10 +915,10 @@ Systeem sluit af</td>
 
 ## Toestandsdiagrammen
 
-![image alt text](image_18.png)
+![image alt text](./../.assets/wiki/images/image_18.png)
 
-![image alt text](image_19.png)
+![image alt text](./../.assets/wiki/images/image_19.png)
 
 ## Klassendiagram
 
-![image alt text](image_20.png)
+![image alt text](./../.assets/wiki/images/image_20.png)
