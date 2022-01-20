@@ -16,7 +16,7 @@ De opdrachtgever wil een applicatie waarmee gezocht kan worden anar bezemvakken 
 [Visie/Scope Document (Wordt Later toegevoegd)](#)
 
 ## Project link
-[Project Website](https://tim-bolhoeve.github.io/GroepZeroPRFEP/) - voor nu nog tijdelijk gehost op github pages met dummy data.
+[Project Website](https://groepzeroprfep.herokuapp.com/)
 
 ## Collaborators
 - Tim
