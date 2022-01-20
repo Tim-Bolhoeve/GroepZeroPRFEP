@@ -113,9 +113,12 @@ ___________________________________________________________________________
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor klikt op de zoekbalk
-Actor voert zoekterm(en) in
-Systeem sluit af</td>
+        <br/>
+        Actor klikt op de zoekbalk
+        <br/>
+        Actor voert zoekterm(en) in
+        <br/>
+        Systeem sluit af</td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -136,10 +139,14 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Systeem start op
-Actor klikt op de zoekbalk
-Actor voert zoekterm(en) in
-Systeem geeft foutmelding dat er niet is om te laten zien 
-Systeem stuurt actor terug naar stap 2</td>
+      Actor klikt op de zoekbalk
+      <br/>
+      Actor voert zoekterm(en) in
+      <br/>
+      Systeem geeft foutmelding dat er niet is om te laten zien
+      <br/>
+      Systeem stuurt actor terug naar stap 2
+    </td>
   </tr>
   <tr>
     <td>E-Postconditie</td>
@@ -172,10 +179,14 @@ Systeem stuurt actor terug naar stap 2</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor klikt op de filter knop
-Systeem toont verschillende opties
-Actor kiest een van de gegeven opties
-Systeem sluit af</td>
+      Actor klikt op de filter knop
+      <br/>
+      Systeem toont verschillende opties
+      <br/>
+      Actor kiest een van de gegeven opties
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -222,114 +233,286 @@ ___________________________________________________________________________
 
 ### Use case templates
 
-<table>
-  <tr>
-    <td>UC-01</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>Naam</td>
-    <td>Cursus archiveren</td>
-  </tr>
-  <tr>
-    <td>Beschrijving</td>
-    <td>Actor kan een cursus archiveren.</td>
-  </tr>
-  <tr>
-    <td>Actors</td>
-    <td>Examencommissie</td>
-  </tr>
-  <tr>
-    <td>Main scenario</td>
-    <td>
-Pre conditie
-Cursus moet zijn geactiveerd.
-Scenario
-1.      Systeem toont cursus.
-2.      Als Actor is geautoriseerd.
-2.1.   Systeem toont "archiveren" knop
-2.2.   Actor drukt op “archiveren” knop
-2.3.   Systeem archiveert cursus.
-3.      Usecase eindigt.
-Postconditie
-Cursus is gearchiveerd.
-</td>
-  </tr>
-  <tr>
-    <td>Alternatief scenario</td>
-    <td>
-ID
-Niet geautoriseerd
-Trigger
-Actor is in stap 2 niet geautoriseerd
-Scenario
-1. Systeem toont cursus
-2. Usecase eindigt
-Postconditie
-n.v.t.
-</td>
-  </tr>
-  <tr>
-    <td>Exception scenario</td>
-    <td>n.v.t.</td>
-  </tr>
+  <table class="c10">
+    <tbody>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">UC-01</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Naam</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Cursus archiveren</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Beschrijving</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Actor kan een cursus archiveren.</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Actors</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Examencommissie</span></p>
+            </td>
+        </tr>
+        <tr class="c38">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Main scenario</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7 c12"><span class="c4"></span></p><a
+                    id="t.76b4f186c2c547b71be904c336f7079a239d6443"></a><a id="t.3"></a>
+                <table class="c10">
+                    <tbody>
+                        <tr class="c3">
+                            <td class="c33" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Pre conditie</span></p>
+                            </td>
+                            <td class="c50" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Cursus moet zijn geactiveerd.</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c60">
+                            <td class="c33" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Scenario</span></p>
+                            </td>
+                            <td class="c50" colspan="1" rowspan="1">
+                                <p class="c7 c17"><span class="c4">1. &nbsp; &nbsp; &nbsp;Systeem toont
+                                        cursus.</span></p>
+                                <p class="c7 c17"><span class="c4">2. &nbsp; &nbsp; &nbsp;Als Actor is
+                                        geautoriseerd.</span></p>
+                                <p class="c7 c45"><span class="c4">2.1. &nbsp; Systeem toont
+                                        &ldquo;archiveren&rdquo; knop</span></p>
+                                <p class="c7 c45"><span class="c4">2.2. &nbsp; Actor drukt op
+                                        &ldquo;archiveren&rdquo; knop</span></p>
+                                <p class="c7 c45"><span class="c4">2.3. &nbsp; Systeem archiveert cursus.</span></p>
+                                <p class="c7 c17"><span class="c4">3. &nbsp; &nbsp; &nbsp;Usecase eindigt.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c33" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Postconditie</span></p>
+                            </td>
+                            <td class="c50" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Cursus is gearchiveerd.</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="c7 c12"><span class="c4"></span></p>
+            </td>
+        </tr>
+        <tr class="c73">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Alternatief scenario</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7 c12"><span class="c4"></span></p><a
+                    id="t.a927e69fcf2d42b0274cfe4d6e412cd96ff34e0b"></a><a id="t.4"></a>
+                <table class="c10">
+                    <tbody>
+                        <tr class="c3">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">ID</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Niet geautoriseerd</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Trigger</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Actor is in stap 2 niet geautoriseerd</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c47">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Scenario</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">1. Systeem toont cursus</span></p>
+                                <p class="c68"><span class="c4">2. Usecase eindigt</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Postconditie</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">n.v.t.</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="c7 c12"><span class="c4"></span></p>
+            </td>
+        </tr>
+        <tr class="c69">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Exception scenario</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">n.v.t.</span></p>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 
+<table class="c10">
+    <tbody>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">UC-02</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Naam</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Cursus activeren</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Beschrijving</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Actor kan een cursus activeren.</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Actors</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Examencommissie</span></p>
+            </td>
+        </tr>
+        <tr class="c38">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Main scenario</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7 c12"><span class="c4"></span></p><a
+                    id="t.3250696ea9924a4bca67c0cca213d4b9f1c164ee"></a><a id="t.6"></a>
+                <table class="c10">
+                    <tbody>
+                        <tr class="c3">
+                            <td class="c26" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Pre conditie</span></p>
+                            </td>
+                            <td class="c63" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Actor is geautoriseerd</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c60">
+                            <td class="c26" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Scenario</span></p>
+                            </td>
+                            <td class="c63" colspan="1" rowspan="1">
+                                <p class="c7 c17"><span class="c4">1. &nbsp; &nbsp; &nbsp;Systeem toont lijst met
+                                        cursussen</span></p>
+                                <p class="c7 c17"><span class="c4">2. &nbsp; &nbsp; &nbsp;Actor selecteert cursussen
+                                        die geactiveerd moeten worden.</span></p>
+                                <p class="c7 c17"><span class="c4">3. &nbsp; &nbsp; &nbsp;Actor drukt na selectie op
+                                        &ldquo;Activeren&rdquo; knop.</span></p>
+                                <p class="c7 c17"><span class="c4">4. &nbsp; &nbsp; &nbsp;Systeem activeert
+                                        geselecteerde cursussen.</span></p>
+                                <p class="c7 c17"><span class="c4">5. &nbsp; &nbsp; &nbsp;Usecase eindigt</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c26" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Postconditie</span></p>
+                            </td>
+                            <td class="c63" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Cursussen zijn geactiveerd.</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="c7 c12"><span class="c4"></span></p>
+            </td>
+        </tr>
+        <tr class="c22">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Alternatief scenario</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7 c12"><span class="c4"></span></p><a
+                    id="t.68e8507df9063a475549685bf1992166e0c14567"></a><a id="t.7"></a>
+                <table class="c10">
+                    <tbody>
+                        <tr class="c3">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">ID</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Niet geautoriseerd</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Trigger</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Actor is in preconditie niet geautoriseerd</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c56">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Scenario</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">1. Systeem laadt in plaats van pagina een 405 error
+                                        zien.</span></p>
+                                <p class="c68"><span class="c4">2. Usecase eindigt.</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c24" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Postconditie</span></p>
+                            </td>
+                            <td class="c13" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">n.v.t.</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="c7 c12"><span class="c4"></span></p>
+            </td>
+        </tr>
+        <tr class="c62">
+            <td class="c35" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Exception scenario</span></p>
+            </td>
+            <td class="c41" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">n.v.t.</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
  
-
-<table>
-  <tr>
-    <td>UC-02</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>Naam</td>
-    <td>Cursus activeren</td>
-  </tr>
-  <tr>
-    <td>Beschrijving</td>
-    <td>Actor kan een cursus activeren.</td>
-  </tr>
-  <tr>
-    <td>Actors</td>
-    <td>Examencommissie</td>
-  </tr>
-  <tr>
-    <td>Main scenario</td>
-    <td>
-Pre conditie
-Actor is geautoriseerd
-Scenario
-1.      Systeem toont lijst met cursussen
-2.      Actor selecteert cursussen die geactiveerd moeten worden.
-3.      Actor drukt na selectie op "Activeren" knop.
-4.      Systeem activeert geselecteerde cursussen.
-5.      Usecase eindigt
-Postconditie
-Cursussen zijn geactiveerd.
-</td>
-  </tr>
-  <tr>
-    <td>Alternatief scenario</td>
-    <td>
-ID
-Niet geautoriseerd
-Trigger
-Actor is in preconditie niet geautoriseerd
-Scenario
-1. Systeem laadt in plaats van pagina een 405 error zien.
-2. Usecase eindigt.
-Postconditie
-n.v.t.
-</td>
-  </tr>
-  <tr>
-    <td>Exception scenario</td>
-    <td>n.v.t.</td>
-  </tr>
-</table>
-
 
 ### Toestandsdiagram
 
@@ -347,45 +530,102 @@ n.v.t.
 
 ### Use case template(s)
 
-<table>
-  <tr>
-    <td>UC-04</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>Naam</td>
-    <td>Gegevens vervangend vak inzien</td>
-  </tr>
-  <tr>
-    <td>Beschrijving</td>
-    <td>Actor de gegevens van een gekozen vak bekijken.</td>
-  </tr>
-  <tr>
-    <td>Actors</td>
-    <td>Examencommissie, Student, enzo.</td>
-  </tr>
-  <tr>
-    <td>Main scenario</td>
-    <td>
-Pre conditie
--
-Scenario
-1.      Systeem toont lijst met cursussen.
-2.      Actor selecteert cursus.
-3.      Systeem toont cursus.
-4.      Use case eindigt.
-Postconditie
--
-</td>
-  </tr>
-  <tr>
-    <td>Alternatief scenario</td>
-    <td>n.v.t.</td>
-  </tr>
-  <tr>
-    <td>Exception scenario</td>
-    <td>n.v.t.</td>
-  </tr>
+<table class="c10">
+    <tbody>
+        <tr class="c3">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">UC-04</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Naam</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Gegevens vervangend vak inzien</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Beschrijving</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Actor de gegevens van een gekozen vak bekijken.</span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Actors</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Examencommissie, Student, enzo.</span></p>
+            </td>
+        </tr>
+        <tr class="c75">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Main scenario</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7 c12"><span class="c4"></span></p><a
+                    id="t.97be574fda389b9f4f04e2b2e3953925d98be6d2"></a><a id="t.9"></a>
+                <table class="c10">
+                    <tbody>
+                        <tr class="c3">
+                            <td class="c33" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Pre conditie</span></p>
+                            </td>
+                            <td class="c59" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">-</span></p>
+                            </td>
+                        </tr>
+                        <tr class="c66">
+                            <td class="c33" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Scenario</span></p>
+                            </td>
+                            <td class="c59" colspan="1" rowspan="1">
+                                <p class="c7 c17"><span class="c4">1. &nbsp; &nbsp; &nbsp;Systeem toont lijst met
+                                        cursussen.</span></p>
+                                <p class="c7 c17"><span class="c4">2. &nbsp; &nbsp; &nbsp;Actor selecteert
+                                        cursus.</span></p>
+                                <p class="c7 c17"><span class="c4">3. &nbsp; &nbsp; &nbsp;Systeem toont
+                                        cursus.</span></p>
+                                <p class="c7 c17"><span class="c4">4. &nbsp; &nbsp; &nbsp;Use case eindigt.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="c3">
+                            <td class="c33" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">Postconditie</span></p>
+                            </td>
+                            <td class="c59" colspan="1" rowspan="1">
+                                <p class="c7"><span class="c4">-</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="c7 c12"><span class="c4"></span></p>
+            </td>
+        </tr>
+        <tr class="c3">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Alternatief scenario</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">n.v.t.</span></p>
+            </td>
+        </tr>
+        <tr class="c62">
+            <td class="c49" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">Exception scenario</span></p>
+            </td>
+            <td class="c36" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">n.v.t.</span></p>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 
@@ -427,11 +667,16 @@ ___________________________________________________________________________
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor gaat naar de vakkenlijst
-Actor klikt op een vak
-Actor schrijft een opmerking
-Actor klikt op verzenden
-Systeem sluit af</td>
+      Actor gaat naar de vakkenlijst
+      <br/>
+      Actor klikt op een vak
+      <br/>
+      Actor schrijft een opmerking
+      <br/>
+      Actor klikt op verzenden
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -450,11 +695,17 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor gaat naar de vakkenlijst
-Actor klikt op een vak
-Actor schrijft een opmerking
-Actor klikt op annuleren
-Systeem sluit af</td>
+      <br/>
+      Actor gaat naar de vakkenlijst
+      <br/>
+      Actor klikt op een vak
+      <br/>
+      Actor schrijft een opmerking
+      <br/>
+      Actor klikt op annuleren
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>A-Postconditie</td>
@@ -471,11 +722,17 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor gaat naar de vakkenlijst
-Actor klikt op een vak
-Actor schrijft een opmerking
-er komt een foutmelding die aangeeft dat er niets is ingevuld / te veel is ingevuld
-Systeem sluit af</td>
+      <br/>
+      Actor gaat naar de vakkenlijst
+      <br/>
+      Actor klikt op een vak
+      <br/>
+      Actor schrijft een opmerking
+      <br/>
+      er komt een foutmelding die aangeeft dat er niets is ingevuld / te veel is ingevuld
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>E-Postconditie</td>
@@ -509,10 +766,15 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor gaat naar bezemvak aanmaken en voorstellen
-Actor maakt een volledig bezemvak aan
-Actor stelt de bezemvak voor
-het systeem sluit af</td>
+      <br/>
+      Actor gaat naar bezemvak aanmaken en voorstellen
+      <br/>
+      Actor maakt een volledig bezemvak aan
+      <br/>
+      Actor stelt de bezemvak voor
+      <br/>
+      het systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -531,12 +793,19 @@ het systeem sluit af</td>
   <tr>
     <td>scenario</td>
     <td>Het systeem start op
-Actor gaat naar bezemvak aanmaken en voorstellen
-Actor maakt niet volledige bezemvak aan
-Actor klikt op tijdelijk opslaan
-actor maakt de bezemvak af
-Actor stelt de bezemvak voor
-het systeem sluit af</td>
+      <br/>
+      Actor gaat naar bezemvak aanmaken en voorstellen
+      <br/>
+      Actor maakt niet volledige bezemvak aan
+      <br/>
+      Actor klikt op tijdelijk opslaan
+      <br/>
+      actor maakt de bezemvak af
+      <br/>
+      Actor stelt de bezemvak voor
+      <br/>
+      het systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Exception scenario</td>
@@ -549,11 +818,17 @@ het systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor gaat naar de vakkenlijst
-Actor klikt op een vak
-Actor schrijft een opmerking
-er komt een foutmelding die aangeeft dat er niets is ingevuld / te veel is ingevuld
-Systeem sluit af</td>
+      <br/>
+      Actor gaat naar de vakkenlijst
+      <br/>
+      Actor klikt op een vak
+      <br/>
+      Actor schrijft een opmerking
+      <br/>
+      er komt een foutmelding die aangeeft dat er niets is ingevuld / te veel is ingevuld
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>E-Postconditie</td>
@@ -587,9 +862,13 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op
-Actor gaat naar de voorgestelde bezemvakken pagina
-Actor keurt bezemvak goed
-Het systeem sluit af</td>
+      <br/>
+      Actor gaat naar de voorgestelde bezemvakken pagina
+      <br/>
+      Actor keurt bezemvak goed
+      <br/>
+      Het systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -608,10 +887,15 @@ Het systeem sluit af</td>
   <tr>
     <td>scenario</td>
     <td>Het systeem start op
-Actor gaat naar de voorgestelde bezemvakken pagina
-Actor weigerd de bezemvak
-bezemvak
-Het systeem sluit af</td>
+      <br/>
+      Actor gaat naar de voorgestelde bezemvakken pagina
+      <br/>
+      Actor weigerd de bezemvak
+      <br/>
+      bezemvak
+      <br/>
+      Het systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -670,9 +954,13 @@ ___________________________________________________________________________
   <tr>
     <td>Scenario</td>
     <td>Systeem start op
-Actor drukt op importeren knop
-Actor selecteert excel bestand
-Systeem sluit af</td>
+      <br/>
+      Actor drukt op importeren knop
+      <br/>
+      Actor selecteert excel bestand
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -696,10 +984,15 @@ n.v.t
   <tr>
     <td>scenario</td>
     <td>Het systeem start op
-Actor drukt op importeren knop
-Actor selecteert bestand
-Systeem toont foutmelding
-Systeem sluit af</td>
+      <br/>
+      Actor drukt op importeren knop
+      <br/>
+      Actor selecteert bestand
+      <br/>
+      Systeem toont foutmelding
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>postconditie</td>
@@ -732,8 +1025,11 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Systeem start op
-Actor drukt op exporteren knop
-Systeem sluit af</td>
+      <br/>
+      Actor drukt op exporteren knop
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -795,12 +1091,18 @@ ___________________________________________________________________________
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op.
- Actor gaat naar bezemvakken overzicht scherm.
-Actor maakt een kiest bij het aan te passen bezemvak "aanpassen".
-Actor gaat naar bezemvak aanpassen scherm.
-Actor past het bezemvak aan.
-Actor selecteert “submit”.
-het systeem sluit af</td>
+      Actor gaat naar bezemvakken overzicht scherm.
+      <br/>
+      Actor maakt een kiest bij het aan te passen bezemvak "aanpassen".
+      <br/>
+      Actor gaat naar bezemvak aanpassen scherm.
+      <br/>
+      Actor past het bezemvak aan.
+      <br/>
+      Actor selecteert “submit”.
+      <br/>
+      het systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -829,11 +1131,17 @@ het systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op.
-Actor gaat naar bezemvak aanpassen scherm.
-Actor past niets aan.
-Actor klikt op “submit”.
-er komt een foutmelding die aangeeft dat er niets is veranderd
-Systeem sluit af</td>
+      <br/>
+      Actor gaat naar bezemvak aanpassen scherm.
+      <br/>
+      Actor past niets aan.
+      <br/>
+      Actor klikt op “submit”.
+      <br/>
+      er komt een foutmelding die aangeeft dat er niets is veranderd
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>E-Postconditie</td>
@@ -867,10 +1175,15 @@ Systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op.
-Actor gaat naar het voorstel beoordelen scherm.
-Actor leest het voorstel door.
-Actor klikt op goedkeuren of afkeuren.
-het systeem sluit af</td>
+      <br/>
+      Actor gaat naar het voorstel beoordelen scherm.
+      <br/>
+      Actor leest het voorstel door.
+      <br/>
+      Actor klikt op goedkeuren of afkeuren.
+      <br/>
+      het systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>Postconditie</td>
@@ -899,11 +1212,17 @@ het systeem sluit af</td>
   <tr>
     <td>Scenario</td>
     <td>Het systeem start op.
-Actor gaat naar voorstel beoordelen scherm.
-Systeem heeft geen voorstellen.
-Systeem geeft een foutmelding die aangeeft dat alle voorstellen al beoordeeld zijn.
-Actor wordt teruggestuurd naar hoofdscherm.
-Systeem sluit af</td>
+      <br/>
+      Actor gaat naar voorstel beoordelen scherm.
+      <br/>
+      Systeem heeft geen voorstellen.
+      <br/>
+      Systeem geeft een foutmelding die aangeeft dat alle voorstellen al beoordeeld zijn.
+      <br/>
+      Actor wordt teruggestuurd naar hoofdscherm.
+      <br/>
+      Systeem sluit af
+    </td>
   </tr>
   <tr>
     <td>E-Postconditie</td>
