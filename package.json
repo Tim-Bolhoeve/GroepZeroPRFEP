@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Tim-Bolhoeve/GroepZeroPRFEP#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
     "@vaadin/router": "^1.7.4",
     "connect-history-api-fallback": "^1.6.0",
     "es-dev-server": "^2.1.0",
