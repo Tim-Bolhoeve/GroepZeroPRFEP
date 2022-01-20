@@ -85,7 +85,7 @@ ___________________________________________________________________________
 
 ## Use case
 
-![image alt text](image_0.png)
+![image alt text](../../.assets/wiki/images/image_0.png)
 
 ## Use case templates
 
