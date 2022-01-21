@@ -12,10 +12,6 @@ class SearchScript extends LitElement {
     connectedCallback() {
         super.connectedCallback();
 
-        //nog niet getest NOG DOEN !!!! 21-1-2022
-        window.location.pathname.replace("?", "");
-        window.location.pathname.replace("+", " "); 
-
         let paramList = this.location.params;
         let cursusNaam = paramList.name;
 

@@ -1,4 +1,5 @@
 import {LitElement, html, css} from 'lit';
+import { router } from '../../misc/routes.js';
 
 import '../layout/custom-header.js';
 
@@ -30,18 +31,19 @@ class SearchBar extends LitElement {
                 <div class="row gx-5">
                     <div class="col-lg-10">
                         <br>
-                        <form action="/">
+                        <form id="myForm" action="" method="get">
                             <div style="display: inline-block;">
-                                <input type="text" class="form-control" placeholder="Zoeken op oude naam..">
+                                <input type="text" id="name" class="form-control" placeholder="Zoeken op oude naam.." name="name">
                             </div>
                             <div style="display: inline-block;">
-                                <button class="btn btn-outline-primary" type="submit">Zoeken</button>
+                                <button class="btn btn-outline-primary" type="submit" onClick="console.log('test')">Zoeken</button>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </section>
+
+
         `
     }
 }
