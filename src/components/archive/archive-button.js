@@ -1,6 +1,16 @@
 import {LitElement, html, css} from 'lit';
 
 class ArchiveButton extends LitElement {
+    static get properties() {
+        return {
+            disabled: {
+                type: Boolean,
+                attribute: true,
+                reflect: true
+            }
+        }
+    }
+
     static get styles() {
         return css`
             button {
@@ -13,8 +23,13 @@ class ArchiveButton extends LitElement {
         return html`
             <link href="styles.css" rel="stylesheet">
             <button
-             @click=${() => this._newEvent('onArchive')} 
+             @click=${() => {
+                 if(this.disabled !== true) {
+                     return this._newEvent('onArchive');
+                 }
+             }} 
              type="button" 
+             ?disabled=${this.disabled}
              class="btn btn-warning">
                 Archive
             </button>
