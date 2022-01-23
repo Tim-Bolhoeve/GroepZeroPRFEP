@@ -17,7 +17,7 @@ class CursusTableHome extends LitElement {
         }
       
         thead {
-            background-color:  #5bc0de;
+            background-color:  #5bc0de !important;
             color: black;
         }
       
@@ -38,7 +38,7 @@ class CursusTableHome extends LitElement {
                     <th scope="col">Oude Curuscode</th>
                     <th scope="col">Nieuwe naam</th>
                     <th scope="col">Nieuwe Cursuscode</th>
-                    <th scope="col">Link(s)</th>
+                    <th scope="col">Meer informatie</th>
                 </tr>
             </thead>
             <tbody id="myTable">

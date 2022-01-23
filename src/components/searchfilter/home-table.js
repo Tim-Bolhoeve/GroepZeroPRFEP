@@ -1,6 +1,7 @@
 import {LitElement, html, css} from 'lit';
 
 import './cursus-table-home.js';
+import './search-bar.js';
 import '../layout/custom-header.js';
 
 // https://vaadin.github.io/router/vaadin-router/demo/#vaadin-router-getting-started-demos
@@ -28,7 +29,8 @@ class HomeTable extends LitElement {
     render() {
         return html`
             <link href="styles.css" rel="stylesheet">
-            <custom-header>Zoeken / Filteren</custom-header>
+            <custom-header>Zoeken</custom-header>
+            <search-bar></search-bar>
             <div id="cursussen" class="container table-responsive">
                 <cursus-table-home>
                 </cursus-table-home>
