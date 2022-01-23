@@ -17,7 +17,6 @@ class CursusDiv extends LitElement {
 
         this.location = router.location;
         this.disabled = false;
-
     }
 
     static get properties() {
@@ -37,7 +36,10 @@ class CursusDiv extends LitElement {
         let paramList = this.location.params;
         this._cursusCode = paramList.code;
 
-        this._getCourseFromCode(this._cursusCode);
+        let state = store.getState();
+        if(selectItemUsingCode(state, this._cursusCode) !== undefined) {
+            this._getCourseFromCode(this._cursusCode);  
+        }
     }
 
     _archiveCourse() {
@@ -50,10 +52,10 @@ class CursusDiv extends LitElement {
     // Pakt de eerst gevonden resultaat op
     _getCourseFromCode(code) {
         let state = store.getState();
-        if(selectItemUsingCode(state, code) !== undefined) {
-            this._foundCourse = selectItemUsingCode(state, code);
-            this._replaceCourse = this._foundCourse.replacement;
-        }
+
+        this._foundCourse = selectItemUsingCode(state, code);
+        this._replaceCourse = this._foundCourse.replacement;
+        this.disabled = !this._foundCourse.active;
     }
 
     static get styles() {
