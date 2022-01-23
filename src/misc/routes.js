@@ -10,7 +10,7 @@ const router = new Router(outlet);
 // Hier worden de componenten geladen
 router.setRoutes([
     {path: '/', component: 'home-table'},
-    {path: '/name=:name', component: 'search-script'},
+    {path: '/:name', component: 'search-script'},
     {path: '/cursus/:code', component: 'cursus-div'},
     {path: '(.*)', component: ''}
 ]);

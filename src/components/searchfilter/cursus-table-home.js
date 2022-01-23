@@ -1,9 +1,13 @@
 import {LitElement, html, css, unsafeCSS} from 'lit';
 import { courses } from '../../misc/courses.js';
+import { store } from '../archive/redux/reducer.js';
+import { selectActiveItems } from '../archive/redux/selectors.archive.js';
 
 class CursusTableHome extends LitElement {
     constructor() {
         super();
+        // this._cursussen = selectActiveItems(store.getState());
+        // console.log(this._cursussen);
     }
 
     connectedCallback() {
@@ -35,7 +39,7 @@ class CursusTableHome extends LitElement {
             <thead class="table-light">
                 <tr>
                     <th scope="col">Oude naam</th>
-                    <th scope="col">Oude Curuscode</th>
+                    <th scope="col">Oude Cursuscode</th>
                     <th scope="col">Nieuwe naam</th>
                     <th scope="col">Nieuwe Cursuscode</th>
                     <th scope="col">Meer informatie</th>

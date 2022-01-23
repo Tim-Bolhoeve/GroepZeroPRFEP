@@ -1,6 +1,7 @@
 import {LitElement, html, css, unsafeCSS} from 'lit';
 import { courses } from '../../misc/courses.js';
 import { router } from '../../misc/routes.js';
+import './search-bar.js';
 import '../layout/custom-header.js';
 
 class SearchScript extends LitElement {
@@ -51,12 +52,14 @@ class SearchScript extends LitElement {
 
             <custom-header>Gezocht:<br> "${this._foundCourse.name}"</custom-header>
 
+
+            <search-bar></search-bar>
             <div id="cursussen" class="container table-responsive">
                 <table class="table table-bordered">
                     <thead class="table-light">
                         <tr>
                             <th scope="col">Oude naam</th>
-                            <th scope="col">Oude Curuscode</th>
+                            <th scope="col">Oude Cursuscode</th>
                             <th scope="col">Nieuwe naam</th>
                             <th scope="col">Nieuwe Cursuscode</th>
                             <th scope="col">Meer informatie</th>
