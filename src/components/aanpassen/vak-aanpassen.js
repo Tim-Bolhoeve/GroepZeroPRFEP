@@ -9,7 +9,6 @@ class vakAanpassen extends LitElement {
 
     render() {
         return html`
-        <script src="button-event.js">
         <link href="styles.css" rel="stylesheet">
         <body class="d-flex flex-column">
         <main class="flex-shrink-0">
@@ -74,8 +73,8 @@ class vakAanpassen extends LitElement {
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
                                     <!-- Submit knop-->
                                     <div class="button-box col-lg-12">
-                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Aanpassen</button>
-                                        <button class="btn btn-dark btn-lg" id="submitButton" type="submit">Annuleren</button>
+                                        <button class="btn btn-primary btn-lg" id="aanpasButton" type="submit">Aanpassen</button>
+                                        <button class="btn btn-dark btn-lg" id="annuleerButton" type="submit">Annuleren</button>
                                     </div>
                                 </form>
                             </div>

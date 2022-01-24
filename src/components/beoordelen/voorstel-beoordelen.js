@@ -45,8 +45,8 @@ class voorstelBeoordelen extends LitElement {
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
                                     <!-- Submit knop-->
                                     <div class="button-box col-lg-12">
-                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Goedkeuren</button>
-                                        <button class="btn btn-dark btn-lg" id="submitButton" type="submit">Afkeuren</button>
+                                        <button class="btn btn-primary btn-lg" id="goedkeurButton" type="submit">Goedkeuren</button>
+                                        <button class="btn btn-dark btn-lg" id="afkeurButton" type="submit">Afkeuren</button>
                                     </div>
                                 </form>
                             </div>
