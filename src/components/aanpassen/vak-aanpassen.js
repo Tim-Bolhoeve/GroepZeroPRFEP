@@ -9,6 +9,7 @@ class vakAanpassen extends LitElement {
 
     render() {
         return html`
+        <script src="../components/keuren/button-event.js"></script>
         <link href="styles.css" rel="stylesheet">
         <body class="d-flex flex-column">
         <main class="flex-shrink-0">
