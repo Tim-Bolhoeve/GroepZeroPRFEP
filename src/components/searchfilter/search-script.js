@@ -44,7 +44,15 @@ class SearchScript extends LitElement {
     }
 
     render() {
-        // alleen nog laten werken met de zoekbalk IPV de URL, en de '+' verwijderen van de URL
+        if(this._foundCourse === undefined) {
+            return html`
+                <div id="cursussen" class="container">
+                    <link href="styles.css" rel="stylesheet">
+                    <h1>Cursus niet gevonden</h1>
+                    <a href="/">Terug</a>
+                </div>
+            `
+        }
 
         return html`
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -52,8 +60,16 @@ class SearchScript extends LitElement {
 
             <custom-header>Gezocht:<br> "${this._foundCourse.name}"</custom-header>
 
-
             <search-bar></search-bar>
+            
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-10">
+                        <a href="/">Terug</a>
+                    </div>
+                </div>
+            </div>
+
             <div id="cursussen" class="container table-responsive">
                 <table class="table table-bordered">
                     <thead class="table-light">
