@@ -1,4 +1,5 @@
 import {LitElement, html, css} from 'lit';
+import { nieuwvak } from './nieuwvak';
 
 class voorstellen extends LitElement {
     static get styles() {
@@ -7,8 +8,35 @@ class voorstellen extends LitElement {
         `;
     }
 
+    _clearForm(){
+        let inputs = this.shadowRoot.querySelectorAll('input');        
+        inputs.forEach(input => input.value = '');
+        console.log(inputs);
+
+    }
+
+    _submitForm(){
+        const coding = this.shadowRoot.querySelector('#code');
+        const naming = this.shadowRoot.querySelector('#name');
+        const eccu = this.shadowRoot.querySelector('#ec-c');
+        const toetsen = this.shadowRoot.querySelector('#toets');
+        const wegingen = this.shadowRoot.querySelector('#weging');
+        const ecto = this.shadowRoot.querySelector('#ec-t');
+
+        const bezemvak = {code: coding.value, name: naming.value, ec_course: eccu.value, test: toetsen.value, weight: wegingen.value, ec_test: ecto.value};
+        const convert = JSON.stringify(bezemvak);
+        console.log(convert);
+
+
+
+    }
+
     render() {
         return html`
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <script src="button-event.js"></script>
         <link href="styles.css" rel="stylesheet">
                 <body class="d-flex flex-column">
                 <main class="flex-shrink-0">
@@ -25,22 +53,21 @@ class voorstellen extends LitElement {
                                 <div class="row gx-5 justify-content-center">
                                     <div class="col-lg-8 col-xl-6">
                                         <!-- form -->
-                                        <form id="contactForm" method="#">
                                             <!-- Naam input-->
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="code" type="text" placeholder="Vul een code in..." required />
+                                                <input name="code" class="form-control" id="code" type="text" placeholder="Vul een code in..." required />
                                                 <label for="code">Code invoeren</label>
                                                 <div class="invalid-feedback" data-sb-feedback="code:required">Een code is verplicht.</div>
                                             </div>
 
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="name" type="text" placeholder="Vul een naam in..." required />
+                                                <input name="name" class="form-control" id="name" type="text" placeholder="Vul een naam in..." required />
                                                 <label for="name">Naam invoeren</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Een vaknaam is verplicht.</div>
                                             </div>
 
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="ec-c" type="number" placeholder="Vul een EC-nummer in..." required />
+                                                <input name="ec-c" class="form-control" id="ec-c" type="number" placeholder="Vul een EC-nummer in..." required />
                                                 <label for="ec-c">EC-Cursus</label>
                                                 <div class="invalid-feedback" data-sb-feedback="ec-c:required">Een EC-cursus nummer is verplicht.</div>
                                             </div>
@@ -48,22 +75,21 @@ class voorstellen extends LitElement {
                                             <div id="toetsen">
                                                 <div class="form-floating mb-3">
                                                     <div class="input-group">
-                                                        <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
+                                                        <input name="toets" class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
                                                         <label for="toets">Toets & Toetsform</label>
-                                                        <button type="button" class="btn btn-primary btn-circle btn-xl" id="add_toets_field">+</button>
                                                         <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="weging" type="number" placeholder="Vul een weging in..." required />
+                                                <input name="weging" class="form-control" id="weging" type="number" placeholder="Vul een weging in..." required />
                                                 <label for="weging">Weging</label>
                                                 <div class="invalid-feedback" data-sb-feedback="weging:required">Een Weging is verplicht.</div>
                                             </div>
 
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="ec-t" type="number" placeholder="Vul een EC-nummer in..." required />
+                                                <input name="ec-t" class="form-control" id="ec-t" type="number" placeholder="Vul een EC-nummer in..." required />
                                                 <label for="ec-t">EC-toets</label>
                                                 <div class="invalid-feedback" data-sb-feedback="ec-t:required">Een EC-toets nummer is verplicht.</div>
                                             </div>
@@ -79,10 +105,9 @@ class voorstellen extends LitElement {
                                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
                                             <!-- Submit knop-->
                                             <div class="button-box col-lg-12">
-                                                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Voorstellen</button>
-                                                <button class="btn btn-dark btn-lg" id="submitButton" type="submit">Annuleren</button>
+                                                <button class="btn btn-primary btn-lg" id="submitButton" type="button" @click=${() => this._submitForm()}>Voorstellen</button>
+                                                <button class="btn btn-dark btn-lg" id="clear" type="button" @click=${() => this._clearForm()}>Annuleren</button>
                                             </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>

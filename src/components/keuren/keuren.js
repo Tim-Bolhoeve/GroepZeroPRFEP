@@ -64,9 +64,9 @@ class keuren extends LitElement {
                                 <td id="doos">${vak.code}</td>
                                 <td>${vak.name}</td>
                                 <td>${vak.ec_course}</td>
-                                <td>${vak.tests[0].name}</td>
-                                <td>${vak.tests[0].weight}</td>
-                                <td>${vak.tests[0].ec_test}</td>
+                                <td>${vak.test}</td>
+                                <td>${vak.weight}</td>
+                                <td>${vak.ec_test}</td>
                                 <td>
                                     <div class="button-box col-lg-12">
                                         <button class="btn btn-primary btn-lg" onclick="goedkeuren()" type="submit">Goedkeuren</button>
