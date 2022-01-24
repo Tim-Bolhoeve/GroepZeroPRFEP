@@ -19,6 +19,13 @@ class SearchBar extends LitElement {
         `
     }
 
+    _searchFilter(){
+        const name = this.shadowRoot.querySelector("#name");
+
+        window.location.href = name.value;
+    }
+
+    
     render() {
         // form laten werken met search script ipv URL 
 
@@ -31,19 +38,16 @@ class SearchBar extends LitElement {
                 <div class="row gx-5">
                     <div class="col-lg-10">
                         <br>
-                        <form id="myForm" action="" method="get">
                             <div style="display: inline-block;">
-                                <input type="text" id="name" class="form-control" placeholder="Zoeken op oude naam.." name="name">
+                                <input type="text" id="name" class="form-control" placeholder="Zoeken op oude naam..">
                             </div>
                             <div style="display: inline-block;">
-                                <button class="btn btn-outline-primary" type="submit" onClick="console.log('test')">Zoeken</button>
+                                <button class="btn btn-outline-primary" type="button" @click=${() => this._searchFilter()}>Zoeken</button>
                             </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
         `
     }
 }
