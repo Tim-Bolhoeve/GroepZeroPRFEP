@@ -6,8 +6,7 @@ import { selectActiveItems } from '../archive/redux/selectors.archive.js';
 class CursusTableHome extends LitElement {
     constructor() {
         super();
-        // this._cursussen = selectActiveItems(store.getState());
-        // console.log(this._cursussen);
+        this._cursussen = selectActiveItems(store.getState());
     }
 
     connectedCallback() {
@@ -46,7 +45,7 @@ class CursusTableHome extends LitElement {
                 </tr>
             </thead>
             <tbody id="myTable">
-                ${courses.map(vak => html`
+                ${this._cursussen.map(vak => html`
                     ${vak.replacement.length > 1 ? html`  
                         <tr>
                             <td>${vak.name}</td>
