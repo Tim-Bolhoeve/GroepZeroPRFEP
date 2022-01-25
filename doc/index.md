@@ -1241,3 +1241,6 @@ ___________________________________________________________________________
 ## Klassendiagram
 
 ![image alt text](./../.assets/wiki/images/image_20.png)
+
+#Sitemap
+![image alt text](./../.assets/wiki/images/sitemap.png)
