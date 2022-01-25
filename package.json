@@ -1,0 +1,43 @@
+{
+  "name": "GroepZeroPRFEP",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <img src=\"https://i.imgur.com/taIht5e.png\" />\r </p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "node server.js",
+    "serve": "es-dev-server --app-index public/index.html --open --node-resolve --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tim-Bolhoeve/GroepZeroPRFEP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tim-Bolhoeve/GroepZeroPRFEP/issues"
+  },
+  "homepage": "https://github.com/Tim-Bolhoeve/GroepZeroPRFEP#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
+    "@vaadin/router": "^1.7.4",
+    "connect-history-api-fallback": "^1.6.0",
+    "es-dev-server": "^2.1.0",
+    "express": "^4.17.2",
+    "lit": "^2.1.1",
+    "redux": "^4.1.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
