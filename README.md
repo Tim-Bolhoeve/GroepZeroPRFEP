@@ -10,10 +10,13 @@
 De opdrachtgever wil een applicatie waarmee gezocht kan worden anar bezemvakken via data gegeven door het importeren van een Excel bestand. Ook wil ze dat ze de data (mogelijk aangepast binnen de applicatie) weer kan exporteren naar ene Excel bestand. 
 
 ## Documentatie
-[Google Docs (tijdelijk)](https://docs.google.com/document/d/1zn-6FsVegqmSoehHiirvQwHCXlp0TF0K_N_hO4k3t04/edit#)
+<!-- [Google Docs (tijdelijk)](https://docs.google.com/document/d/1zn-6FsVegqmSoehHiirvQwHCXlp0TF0K_N_hO4k3t04/edit#) -->
+[Functioneel Ontwerp](./doc/index.md)
+<br>
+[Visie/Scope Document](../../wiki)
 
 ## Project link
-[Project Website](https://tim-bolhoeve.github.io/GroepZeroPRFEP/) - voor nu nog tijdelijk gehost op github pages met dummy data.
+[Project Website](https://groepzeroprfep.herokuapp.com/)
 
 ## Collaborators
 - Tim
