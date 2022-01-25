@@ -7,8 +7,13 @@ class voorstelOverzicht extends LitElement {
         `;
     }
 
+    _beoordeel() {
+        window.location.href = "http://localhost:8080/voorstelbeoordelen";
+    }
+
     render() {
         return html`
+            <script src="button-event.js"></script>
             <link href="styles.css" rel="stylesheet">
             <body class="d-flex flex-column">
         <main class="flex-shrink-0">
@@ -44,7 +49,7 @@ class voorstelOverzicht extends LitElement {
                     <td>Aanpassing persoonlijke professionalisering</td>
                     <td>
                         <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Beoordelen</button>
+                            <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
                         </div>
                     </td>
                   </tr>
