@@ -1,4 +1,5 @@
 import {LitElement, html, css} from 'lit';
+import { nieuwvak } from '../aanmaken/nieuwvak.js';
 
 class vakAanpassen extends LitElement {
     static get styles() {
@@ -17,7 +18,7 @@ class vakAanpassen extends LitElement {
         var weging = JSON.stringify(bezemvak.weging);
         var ect = JSON.stringify(bezemvak.ect);
 
-        
+        console.log(code) // undefined
     }
 
     render() {
@@ -41,41 +42,43 @@ class vakAanpassen extends LitElement {
                                 <!-- form -->
                                 <form id="contactForm" method="#">
                                     <!-- Naam input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="code" type="text" placeholder="Vul een code in..." required />
-                                        <label for="code">Code invoeren</label>
-                                        <div class="invalid-feedback" data-sb-feedback="code:required">Een code is verplicht.</div>
-                                    </div>
+                                    
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="code" type="text" placeholder="Vul een code in..." required />
+                                            <label for="code">Code invoeren</label>
+                                            <div class="invalid-feedback" data-sb-feedback="code:required">Een code is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Vul een naam in..." required />
-                                        <label for="name">Naam invoeren</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">Een vaknaam is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="name" type="text" placeholder="Vul een naam in..." required />
+                                            <label for="name">Naam invoeren</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Een vaknaam is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="ec-c" type="number" placeholder="Vul een EC-nummer in..." required />
-                                        <label for="ec-c">EC-Cursus</label>
-                                        <div class="invalid-feedback" data-sb-feedback="ec-c:required">Een EC-cursus nummer is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="ec-c" type="number" placeholder="Vul een EC-nummer in..." required />
+                                            <label for="ec-c">EC-Cursus</label>
+                                            <div class="invalid-feedback" data-sb-feedback="ec-c:required">Een EC-cursus nummer is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
-                                        <label for="toets">Toets & Toetsform</label>
-                                        <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
+                                            <label for="toets">Toets & Toetsform</label>
+                                            <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="weging" type="number" placeholder="Vul een weging in..." required />
-                                        <label for="weging">Weging</label>
-                                        <div class="invalid-feedback" data-sb-feedback="weging:required">Een Weging is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="weging" type="number" placeholder="Vul een weging in..." required />
+                                            <label for="weging">Weging</label>
+                                            <div class="invalid-feedback" data-sb-feedback="weging:required">Een Weging is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="ec-t" type="number" placeholder="Vul een EC-nummer in..." required />
-                                        <label for="ec-t">EC-toets</label>
-                                        <div class="invalid-feedback" data-sb-feedback="ec-t:required">Een EC-toets nummer is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="ec-t" type="number" placeholder="Vul een EC-nummer in..." required />
+                                            <label for="ec-t">EC-toets</label>
+                                            <div class="invalid-feedback" data-sb-feedback="ec-t:required">Een EC-toets nummer is verplicht.</div>
+                                        </div>
+                                    
                                     <!-- gelukt bericht -->
                                     <div class="d-none" id="submitSuccessMessage">
                                         <div class="text-center mb-3">

@@ -29,7 +29,7 @@ class keuren extends LitElement {
         const ect = this.shadowRoot.querySelector('#ec-t');
 
         const bezemvak = {code: code.value, name: name.value, ecc: ecc.value, toets: toets.value, weging: weging.value, ect: ect.value};
-        var bezemvakStr = JSON.stringify(bezemvak);
+        const bezemvakStr = JSON.stringify(bezemvak);
         
         sessionStorage.setItem("bezemvak", bezemvakStr);
 

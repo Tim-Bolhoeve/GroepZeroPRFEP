@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
-import { voorstel1, voorstel2, voorstel3 } from './nieuw-voorstel';
+import { voorstel1 } from './nieuw-voorstel';
+import './voorstel-beoordelen';
 
 class voorstelOverzicht extends LitElement {
     static get styles() {
@@ -9,13 +10,20 @@ class voorstelOverzicht extends LitElement {
     }
 
     _beoordeel() {
-        
+        // const onderwerp = this.shadowRoot.querySelector('#onderwerp');
+        // const bericht = this.shadowRoot.querySelector('#bericht');
+
+        // const voorstel = { onderwerp: onderwerp.value, bericht: bericht.value}
+        // const voorstelStr = JSON.stringify(voorstel);
+
+        // sessionStorage.setItem("voorstel", voorstelStr);
+
+    
         window.location.href = "http://localhost:8080/voorstelbeoordelen";
     }
 
     render() {
         return html`
-            <script src="button-event.js"></script>
             <link href="styles.css" rel="stylesheet">
             <body class="d-flex flex-column">
         <main class="flex-shrink-0">
@@ -49,34 +57,14 @@ class voorstelOverzicht extends LitElement {
                 <tbody id="myTable">
                     ${voorstel1.map(voorstel => html`
                         <tr>
-                            <td>${voorstel.onderwerp}</td>
+                            <td id="onderwerp">${voorstel.onderwerp}</td>
                             <td>
                                 <div class="button-box col-lg-12">
                                     <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
                                 </div>
                             </td>
                         </tr>
-                    `)}
-                    ${voorstel2.map(voorstel => html`
-                        <tr>
-                            <td>${voorstel.onderwerp}</td>
-                            <td>
-                                <div class="button-box col-lg-12">
-                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
-                                </div>
-                            </td>
-                        </tr>
-                    `)}
-                    ${voorstel3.map(voorstel => html`
-                        <tr>
-                            <td>${voorstel.onderwerp}</td>
-                            <td>
-                                <div class="button-box col-lg-12">
-                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
-                                </div>
-                            </td>
-                        </tr>
-                    `)}             
+                    `)}          
                 </tr>
                 </tbody>
               </table>

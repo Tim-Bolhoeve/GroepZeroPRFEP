@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </header>
-        `}});const rt=[{code:"MBBM-P-BUP1-17",name:"Businessplan Principles 1",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-MAVE-18",name:"Marktverkenning",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]},{code:"MBBM-P-PP-17",name:"Persoonlijke professionalisering",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-PRVA-20",name:"Professionele vaardigheden A",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]},{code:"MBBU-P-PRVB-18",name:"Professionele vaardigheden B",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]}];window.customElements.define("cursus-div",class extends X{constructor(){super(),this.location=ct.location}static get properties(){return{location:Object}}connectedCallback(){super.connectedCallback();let e=this.location.params;this._cursusCode=e.code,this._getCourseFromCode(this._cursusCode)}_archiveCourse(){}_getCourseFromCode(e){rt.find((t=>t.code===e))&&(this._foundCourse=rt.find((t=>t.code===e)),this._replaceCourse=this._foundCourse.replacement[0])}static get styles(){return i`
+        `}});const rt=[{code:"MBBM-P-BUP1-17",name:"Businessplan Principles 1",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-MAVE-18",name:"Marktverkenning",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]},{code:"MBBM-P-PP-17",name:"Persoonlijke professionalisering",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-PRVA-20",name:"Professionele vaardigheden A",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]},{code:"MBBU-P-PRVB-18",name:"Professionele vaardigheden B",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]}];window.customElements.define("cursus-div",class extends X{constructor(){super(),this.location=at.location}static get properties(){return{location:Object}}connectedCallback(){super.connectedCallback();let e=this.location.params;this._cursusCode=e.code,this._getCourseFromCode(this._cursusCode)}_archiveCourse(){}_getCourseFromCode(e){rt.find((t=>t.code===e))&&(this._foundCourse=rt.find((t=>t.code===e)),this._replaceCourse=this._foundCourse.replacement[0])}static get styles(){return i`
             #cursussen {
                 display: grid;
                 grid-row-gap: 1em;
@@ -196,9 +196,9 @@
                 <cursus-table-home>
                 </cursus-table-home>
             </div>
-        `}}),window.customElements.define("vak-aanpassen",class extends X{static get styles(){return i`
+        `}});const st=[{code:"MBBM-P-DIP4-20",name:"programming",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]},{code:"hshsp-fjh-364",name:"jan",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]}];window.customElements.define("vak-aanpassen",class extends X{static get styles(){return i`
             
-        `}_fillForm(){var e=JSON.parse(sessionStorage.getItem("bezemvak"));JSON.stringify(e.code),JSON.stringify(e.name),JSON.stringify(e.ecc),JSON.stringify(e.toets),JSON.stringify(e.weging),JSON.stringify(e.ect)}render(){return P`
+        `}_fillForm(){var e=JSON.parse(sessionStorage.getItem("bezemvak")),t=JSON.stringify(e.code);JSON.stringify(e.name),JSON.stringify(e.ecc),JSON.stringify(e.toets),JSON.stringify(e.weging),JSON.stringify(e.ect),console.log(t)}render(){return P`
         <script src="../components/keuren/button-event.js"></script>
         <link href="styles.css" rel="stylesheet">
         <body class="d-flex flex-column">
@@ -218,41 +218,43 @@
                                 <!-- form -->
                                 <form id="contactForm" method="#">
                                     <!-- Naam input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="code" type="text" placeholder="Vul een code in..." required />
-                                        <label for="code">Code invoeren</label>
-                                        <div class="invalid-feedback" data-sb-feedback="code:required">Een code is verplicht.</div>
-                                    </div>
+                                    
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="code" type="text" placeholder="Vul een code in..." required />
+                                            <label for="code">Code invoeren</label>
+                                            <div class="invalid-feedback" data-sb-feedback="code:required">Een code is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Vul een naam in..." required />
-                                        <label for="name">Naam invoeren</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">Een vaknaam is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="name" type="text" placeholder="Vul een naam in..." required />
+                                            <label for="name">Naam invoeren</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Een vaknaam is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="ec-c" type="number" placeholder="Vul een EC-nummer in..." required />
-                                        <label for="ec-c">EC-Cursus</label>
-                                        <div class="invalid-feedback" data-sb-feedback="ec-c:required">Een EC-cursus nummer is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="ec-c" type="number" placeholder="Vul een EC-nummer in..." required />
+                                            <label for="ec-c">EC-Cursus</label>
+                                            <div class="invalid-feedback" data-sb-feedback="ec-c:required">Een EC-cursus nummer is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
-                                        <label for="toets">Toets & Toetsform</label>
-                                        <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="toets" type="text" placeholder="Vul een Toets & toetsvorm in..." required />
+                                            <label for="toets">Toets & Toetsform</label>
+                                            <div class="invalid-feedback" data-sb-feedback="toets:required">Een Toets & toetvorm is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="weging" type="number" placeholder="Vul een weging in..." required />
-                                        <label for="weging">Weging</label>
-                                        <div class="invalid-feedback" data-sb-feedback="weging:required">Een Weging is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="weging" type="number" placeholder="Vul een weging in..." required />
+                                            <label for="weging">Weging</label>
+                                            <div class="invalid-feedback" data-sb-feedback="weging:required">Een Weging is verplicht.</div>
+                                        </div>
 
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="ec-t" type="number" placeholder="Vul een EC-nummer in..." required />
-                                        <label for="ec-t">EC-toets</label>
-                                        <div class="invalid-feedback" data-sb-feedback="ec-t:required">Een EC-toets nummer is verplicht.</div>
-                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="ec-t" type="number" placeholder="Vul een EC-nummer in..." required />
+                                            <label for="ec-t">EC-toets</label>
+                                            <div class="invalid-feedback" data-sb-feedback="ec-t:required">Een EC-toets nummer is verplicht.</div>
+                                        </div>
+                                    
                                     <!-- gelukt bericht -->
                                     <div class="d-none" id="submitSuccessMessage">
                                         <div class="text-center mb-3">
@@ -296,86 +298,9 @@
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}}),window.customElements.define("voorstel-beoordelen",class extends X{static get styles(){return i`
-            
-        `}render(){return P`
-        <link href="styles.css" rel="stylesheet">
-        <body class="d-flex flex-column">
-        <main class="flex-shrink-0">
-            <!-- Navigatie-->
-            <div id="nav-placeholder"></div>
-            <!-- Form-->
-            <section class="py-5">
-                <div class="container px-5">
-                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
-                        <div class="text-center mb-5">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-right-text-fill"></i></div>
-                            <h1 class="fw-bolder">Voorstel beoordelen</h1>
-                        </div>
-                        <div class="row gx-5 justify-content-center">
-                            <div class="col-lg-8 col-xl-6">
-                                <!-- form -->
-                                <form id="contactForm" method="#">
-                                    
-                                    <div class="form-floating mb-3">
-                                        <input readonly class="form-control" id="onderwerp" type="text">
-                                        <label for="onderwerp">Onderwerp</label>
-                                    </div>
-
-                                    <div class="form-floating mb-3">
-                                        <label for="beoordeelbericht"></label>
-                                        <textarea readonly class="form-control" id="bericht" type="text" style="height: 10rem"></textarea>
-                                        <label for="message">Bericht</label>
-                                    </div>
-
-                                    <!-- gelukt bericht -->
-                                    <div class="d-none" id="submitSuccessMessage">
-                                        <div class="text-center mb-3">
-                                            <div class="fw-bolder">Gelukt!</div>
-                                            <a href="#">linkje hier</a>
-                                        </div>
-                                    </div>
-                                    <!-- error bericht  -->
-                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
-                                    <!-- Submit knop-->
-                                    <div class="button-box col-lg-12">
-                                        <button class="btn btn-primary btn-lg" id="goedkeurButton" type="submit">Goedkeuren</button>
-                                        <button class="btn btn-dark btn-lg" id="afkeurButton" type="submit">Afkeuren</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <div id="footer-placeholder"></div>
-
-        <script src="//code.jquery.com/jquery.min.js"></script>
-
-          <script>
-          // navbar inladen
-          $.get("./holders/navbar.html", function(data){
-              $("#nav-placeholder").replaceWith(data);
-          });
-
-          // tabel inhoud inladen
-          $.get("./holders/footer.html", function(data){
-              $("#footer-placeholder").replaceWith(data);
-          });
-
-          </script>
-        <!-- Bootstrap JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!--JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const st=[{onderwerp:"Aanpassing persoonlijke professionalisering",bericht:"Testbericht aanpassing persoonlijke professionalisering"}],it=[{onderwerp:"Verandering aan curriculum",bericht:"Testbericht verandering aan curriculum"}],ot=[{onderwerp:"Manier van doceren",bericht:"Testbericht manier van doceren"}];window.customElements.define("voorstel-overzicht",class extends X{static get styles(){return i`
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const it=[{onderwerp:"Aanpassing persoonlijke professionalisering",bericht:"Testbericht aanpassing persoonlijke professionalisering"},{onderwerp:"Verandering aan curriculum",bericht:"Testbericht verandering aan curriculum"},{onderwerp:"Manier van doceren",bericht:"Testbericht manier van doceren"}];window.customElements.define("voorstel-overzicht",class extends X{static get styles(){return i`
             
         `}_beoordeel(){window.location.href="http://localhost:8080/voorstelbeoordelen"}render(){return P`
-            <script src="button-event.js"></script>
             <link href="styles.css" rel="stylesheet">
             <body class="d-flex flex-column">
         <main class="flex-shrink-0">
@@ -407,36 +332,16 @@
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                    ${st.map((e=>P`
-                        <tr>
-                            <td>${e.onderwerp}</td>
-                            <td>
-                                <div class="button-box col-lg-12">
-                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
-                                </div>
-                            </td>
-                        </tr>
-                    `))}
                     ${it.map((e=>P`
                         <tr>
-                            <td>${e.onderwerp}</td>
+                            <td id="onderwerp">${e.onderwerp}</td>
                             <td>
                                 <div class="button-box col-lg-12">
                                     <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
                                 </div>
                             </td>
                         </tr>
-                    `))}
-                    ${ot.map((e=>P`
-                        <tr>
-                            <td>${e.onderwerp}</td>
-                            <td>
-                                <div class="button-box col-lg-12">
-                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
-                                </div>
-                            </td>
-                        </tr>
-                    `))}             
+                    `))}          
                 </tr>
                 </tbody>
               </table>
@@ -464,11 +369,89 @@
         <!--JS-->
         <script src="js/scripts.js"></script>
     </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const at=[{code:"MBBM-P-DIP4-20",name:"programming",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]},{code:"hshsp-fjh-364",name:"jan",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]}];window.customElements.define("keuren-element",class extends X{constructor(){super()}connectedCallback(){super.connectedCallback()}static get styles(){return i`
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}}),window.customElements.define("voorstel-beoordelen",class extends X{static get styles(){return i`
+            
+        `}_fillForm(){}_redirect(){window.location.href="http://localhost:8080/voorsteloverzicht"}render(){return P`
+        <link href="styles.css" rel="stylesheet">
+        <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Navigatie-->
+            <div id="nav-placeholder"></div>
+            <!-- Form-->
+            <section class="py-5">
+                <div class="container px-5">
+                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-right-text-fill"></i></div>
+                            <h1 class="fw-bolder">Voorstel beoordelen</h1>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <!-- form -->
+                                <form id="contactForm" method="#">
+
+                                    ${it.map((e=>P`
+                                        <div class="form-floating mb-3">
+                                            <input readonly class="form-control" id="onderwerp" value="${e.onderwerp}" type="text">
+                                            <label for="onderwerp">Onderwerp</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <label for="beoordeelbericht"></label>
+                                            <textarea readonly class="form-control" id="bericht" type="text" style="height: 10rem">${e.bericht}</textarea>
+                                            <label for="message">Bericht</label>
+                                        </div>
+                                    `))}
+
+                                    <!-- gelukt bericht -->
+                                    <div class="d-none" id="submitSuccessMessage">
+                                        <div class="text-center mb-3">
+                                            <div class="fw-bolder">Gelukt!</div>
+                                            <a href="#">linkje hier</a>
+                                        </div>
+                                    </div>
+                                    <!-- error bericht  -->
+                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
+                                    <!-- Submit knop-->
+                                    <div class="button-box col-lg-12">
+                                        <button class="btn btn-primary btn-lg" id="goedkeurButton" @click=${()=>this._redirect()} type="submit">Goedkeuren</button>
+                                        <button class="btn btn-dark btn-lg" id="afkeurButton" @click=${()=>this._redirect()} type="submit">Afkeuren</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <div id="footer-placeholder"></div>
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+
+          <script>
+          // navbar inladen
+          $.get("./holders/navbar.html", function(data){
+              $("#nav-placeholder").replaceWith(data);
+          });
+
+          // tabel inhoud inladen
+          $.get("./holders/footer.html", function(data){
+              $("#footer-placeholder").replaceWith(data);
+          });
+
+          </script>
+        <!-- Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}}),window.customElements.define("keuren-element",class extends X{constructor(){super()}connectedCallback(){super.connectedCallback()}static get styles(){return i`
             // #doos{
             //     background-color: green;
             // }
-        `}_submitEdit(){const e=this.shadowRoot.querySelector("#code"),t=this.shadowRoot.querySelector("#name"),n=this.shadowRoot.querySelector("#ec-c"),r=this.shadowRoot.querySelector("#toets"),s=this.shadowRoot.querySelector("#weging"),i=this.shadowRoot.querySelector("#ec-t"),o={code:e.value,name:t.value,ecc:n.value,toets:r.value,weging:s.value,ect:i.value};var a=JSON.stringify(o);sessionStorage.setItem("bezemvak",a),window.location.href="http://localhost:8080/vakaanpassen",_fillForm()}render(){return P`
+        `}_submitEdit(){const e=this.shadowRoot.querySelector("#code"),t=this.shadowRoot.querySelector("#name"),n=this.shadowRoot.querySelector("#ec-c"),r=this.shadowRoot.querySelector("#toets"),s=this.shadowRoot.querySelector("#weging"),i=this.shadowRoot.querySelector("#ec-t"),o={code:e.value,name:t.value,ecc:n.value,toets:r.value,weging:s.value,ect:i.value},a=JSON.stringify(o);sessionStorage.setItem("bezemvak",a),window.location.href="http://localhost:8080/vakaanpassen",_fillForm()}render(){return P`
         <script src="button-event.js"></script>
         <link href="styles.css" rel="stylesheet">
         <main class="flex-shrink-0">
@@ -504,7 +487,7 @@
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                    ${at.map((e=>P`
+                    ${st.map((e=>P`
                             <tr>
                                 <td id="code">${e.code}</td>
                                 <td id="name">${e.name}</td>
@@ -636,4 +619,4 @@
                 <script src="js/scripts.js"></script>
                 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const lt=document.querySelector("#main"),ct=new Ye(lt);ct.setRoutes([{path:"/",component:"home-table"},{path:"/cursus/:code",component:"cursus-div"},{path:"/vakAanpassen",component:"vak-aanpassen"},{path:"/voorstelBeoordelen",component:"voorstel-beoordelen"},{path:"/voorstelOverzicht",component:"voorstel-overzicht"},{path:"/keuren",component:"keuren-element"},{path:"/voorstellen",component:"voorstellen-element"},{path:"(.*)",component:""}])})();
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const ot=document.querySelector("#main"),at=new Ye(ot);at.setRoutes([{path:"/",component:"home-table"},{path:"/cursus/:code",component:"cursus-div"},{path:"/vakAanpassen",component:"vak-aanpassen"},{path:"/voorstelBeoordelen",component:"voorstel-beoordelen"},{path:"/voorstelOverzicht",component:"voorstel-overzicht"},{path:"/keuren",component:"keuren-element"},{path:"/voorstellen",component:"voorstellen-element"},{path:"(.*)",component:""}])})();

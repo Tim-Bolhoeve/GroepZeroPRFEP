@@ -1,10 +1,20 @@
 import {LitElement, html, css} from 'lit';
+import { voorstel1 } from './nieuw-voorstel';
+import './voorstel-overzicht';
 
 class voorstelBeoordelen extends LitElement {
     static get styles() {
         return css`
             
         `;
+    }
+
+    _fillForm() {
+
+    }
+
+    _redirect() {
+        window.location.href = "http://localhost:8080/voorsteloverzicht";
     }
 
     render() {
@@ -26,17 +36,19 @@ class voorstelBeoordelen extends LitElement {
                             <div class="col-lg-8 col-xl-6">
                                 <!-- form -->
                                 <form id="contactForm" method="#">
-                                    
-                                    <div class="form-floating mb-3">
-                                        <input readonly class="form-control" id="onderwerp" type="text">
-                                        <label for="onderwerp">Onderwerp</label>
-                                    </div>
 
-                                    <div class="form-floating mb-3">
-                                        <label for="beoordeelbericht"></label>
-                                        <textarea readonly class="form-control" id="bericht" type="text" style="height: 10rem"></textarea>
-                                        <label for="message">Bericht</label>
-                                    </div>
+                                    ${voorstel1.map(voorstel => html`
+                                        <div class="form-floating mb-3">
+                                            <input readonly class="form-control" id="onderwerp" value="${voorstel.onderwerp}" type="text">
+                                            <label for="onderwerp">Onderwerp</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <label for="beoordeelbericht"></label>
+                                            <textarea readonly class="form-control" id="bericht" type="text" style="height: 10rem">${voorstel.bericht}</textarea>
+                                            <label for="message">Bericht</label>
+                                        </div>
+                                    `)}
 
                                     <!-- gelukt bericht -->
                                     <div class="d-none" id="submitSuccessMessage">
@@ -49,8 +61,8 @@ class voorstelBeoordelen extends LitElement {
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!</div></div>
                                     <!-- Submit knop-->
                                     <div class="button-box col-lg-12">
-                                        <button class="btn btn-primary btn-lg" id="goedkeurButton" type="submit">Goedkeuren</button>
-                                        <button class="btn btn-dark btn-lg" id="afkeurButton" type="submit">Afkeuren</button>
+                                        <button class="btn btn-primary btn-lg" id="goedkeurButton" @click=${() => this._redirect()} type="submit">Goedkeuren</button>
+                                        <button class="btn btn-dark btn-lg" id="afkeurButton" @click=${() => this._redirect()} type="submit">Afkeuren</button>
                                     </div>
                                 </form>
                             </div>
