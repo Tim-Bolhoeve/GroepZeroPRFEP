@@ -15,6 +15,8 @@ De opdrachtgever wil een applicatie waarmee gezocht kan worden anar bezemvakken 
 <br>
 [Visie/Scope Document (Wordt Later toegevoegd)](#)
 
+[Wiki](https://github.com/Tim-Bolhoeve/GroepZeroPRFEP/wiki)
+
 ## Project link
 [Project Website](https://groepzeroprfep.herokuapp.com/)
 
