@@ -1,4 +1,5 @@
 import {LitElement, html, css} from 'lit';
+import { voorstel1, voorstel2, voorstel3 } from './nieuw-voorstel';
 
 class voorstelOverzicht extends LitElement {
     static get styles() {
@@ -8,6 +9,7 @@ class voorstelOverzicht extends LitElement {
     }
 
     _beoordeel() {
+        
         window.location.href = "http://localhost:8080/voorstelbeoordelen";
     }
 
@@ -45,29 +47,36 @@ class voorstelOverzicht extends LitElement {
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                  <tr>
-                    <td>Aanpassing persoonlijke professionalisering</td>
-                    <td>
-                        <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Verandering aan curriculum</td>
-                    <td>
-                        <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Beoordelen</button>
-                        </div>
-                    </td>              
-                 </tr>
-                  <tr>
-                    <td>Manier van doceren</td>
-                    <td>
-                        <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Beoordelen</button>
-                        </div>
-                    </td>                 
+                    ${voorstel1.map(voorstel => html`
+                        <tr>
+                            <td>${voorstel.onderwerp}</td>
+                            <td>
+                                <div class="button-box col-lg-12">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `)}
+                    ${voorstel2.map(voorstel => html`
+                        <tr>
+                            <td>${voorstel.onderwerp}</td>
+                            <td>
+                                <div class="button-box col-lg-12">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `)}
+                    ${voorstel3.map(voorstel => html`
+                        <tr>
+                            <td>${voorstel.onderwerp}</td>
+                            <td>
+                                <div class="button-box col-lg-12">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${() => this._beoordeel()} type="submit">Beoordelen</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `)}             
                 </tr>
                 </tbody>
               </table>

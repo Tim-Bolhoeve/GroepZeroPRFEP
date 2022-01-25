@@ -3,8 +3,8 @@ import '../components/cursus/cursus-div.js';
 import '../components/layout/test-comp.js';
 import '../components/searchfilter/home-table.js';
 import '../components/aanpassen/vak-aanpassen';
-import '../components/beoordelingvrstl/voorstel-beoordelen';
-import '../components/beoordelingvrstl/voorstel-overzicht';
+import '../components/voorstellen/voorstel-beoordelen';
+import '../components/voorstellen/voorstel-overzicht';
 import '../components/keuren/keuren.js';
 import '../components/aanmaken/voorstellen.js'
 // import '../components/searchfilter/search-script.js';

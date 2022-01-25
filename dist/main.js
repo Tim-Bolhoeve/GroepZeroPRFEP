@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </header>
-        `}});const rt=[{code:"MBBM-P-BUP1-17",name:"Businessplan Principles 1",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-MAVE-18",name:"Marktverkenning",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]},{code:"MBBM-P-PP-17",name:"Persoonlijke professionalisering",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-PRVA-20",name:"Professionele vaardigheden A",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]},{code:"MBBU-P-PRVB-18",name:"Professionele vaardigheden B",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]}];window.customElements.define("cursus-div",class extends X{constructor(){super(),this.location=ot.location}static get properties(){return{location:Object}}connectedCallback(){super.connectedCallback();let e=this.location.params;this._cursusCode=e.code,this._getCourseFromCode(this._cursusCode)}_archiveCourse(){}_getCourseFromCode(e){rt.find((t=>t.code===e))&&(this._foundCourse=rt.find((t=>t.code===e)),this._replaceCourse=this._foundCourse.replacement[0])}static get styles(){return i`
+        `}});const rt=[{code:"MBBM-P-BUP1-17",name:"Businessplan Principles 1",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-MAVE-18",name:"Marktverkenning",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]},{code:"MBBM-P-PP-17",name:"Persoonlijke professionalisering",ec_course:5,tests:[{name:"TOETS1 - MC tentamen Principles",weight:100,ec_test:5}],replacement:[{code:"MBBU-P-PRVA-20",name:"Professionele vaardigheden A",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]},{code:"MBBU-P-PRVB-18",name:"Professionele vaardigheden B",ec_course:5,tests:[{name:"TOETS1 - MC tentamen ",weight:100,ec_test:5},{name:"TOETS2 - MC tentamen ",weight:100,ec_test:5}]}]}];window.customElements.define("cursus-div",class extends X{constructor(){super(),this.location=ct.location}static get properties(){return{location:Object}}connectedCallback(){super.connectedCallback();let e=this.location.params;this._cursusCode=e.code,this._getCourseFromCode(this._cursusCode)}_archiveCourse(){}_getCourseFromCode(e){rt.find((t=>t.code===e))&&(this._foundCourse=rt.find((t=>t.code===e)),this._replaceCourse=this._foundCourse.replacement[0])}static get styles(){return i`
             #cursussen {
                 display: grid;
                 grid-row-gap: 1em;
@@ -310,7 +310,7 @@
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">
                             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-right-text-fill"></i></div>
-                            <h1 class="fw-bolder">Voorstel (id: <a href="#">0001</a>) beoordelen</h1>
+                            <h1 class="fw-bolder">Voorstel beoordelen</h1>
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
@@ -318,10 +318,14 @@
                                 <form id="contactForm" method="#">
                                     
                                     <div class="form-floating mb-3">
+                                        <input readonly class="form-control" id="onderwerp" type="text">
+                                        <label for="onderwerp">Onderwerp</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
                                         <label for="beoordeelbericht"></label>
-                                        <textarea class="form-control" id="beoordeelbericht" type="text" placeholder="Voer je bericht in..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <textarea readonly class="form-control" id="bericht" type="text" style="height: 10rem"></textarea>
                                         <label for="message">Bericht</label>
-                                        <div class="invalid-feedback" data-sb-feedback="message:required">Een bericht is verplicht.</div>
                                     </div>
 
                                     <!-- gelukt bericht -->
@@ -368,7 +372,7 @@
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}}),window.customElements.define("voorstel-overzicht",class extends X{static get styles(){return i`
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const st=[{onderwerp:"Aanpassing persoonlijke professionalisering",bericht:"Testbericht aanpassing persoonlijke professionalisering"}],it=[{onderwerp:"Verandering aan curriculum",bericht:"Testbericht verandering aan curriculum"}],ot=[{onderwerp:"Manier van doceren",bericht:"Testbericht manier van doceren"}];window.customElements.define("voorstel-overzicht",class extends X{static get styles(){return i`
             
         `}_beoordeel(){window.location.href="http://localhost:8080/voorstelbeoordelen"}render(){return P`
             <script src="button-event.js"></script>
@@ -403,29 +407,36 @@
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                  <tr>
-                    <td>Aanpassing persoonlijke professionalisering</td>
-                    <td>
-                        <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Verandering aan curriculum</td>
-                    <td>
-                        <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Beoordelen</button>
-                        </div>
-                    </td>              
-                 </tr>
-                  <tr>
-                    <td>Manier van doceren</td>
-                    <td>
-                        <div class="button-box col-lg-12">
-                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Beoordelen</button>
-                        </div>
-                    </td>                 
+                    ${st.map((e=>P`
+                        <tr>
+                            <td>${e.onderwerp}</td>
+                            <td>
+                                <div class="button-box col-lg-12">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `))}
+                    ${it.map((e=>P`
+                        <tr>
+                            <td>${e.onderwerp}</td>
+                            <td>
+                                <div class="button-box col-lg-12">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `))}
+                    ${ot.map((e=>P`
+                        <tr>
+                            <td>${e.onderwerp}</td>
+                            <td>
+                                <div class="button-box col-lg-12">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" @click=${()=>this._beoordeel()} type="submit">Beoordelen</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `))}             
                 </tr>
                 </tbody>
               </table>
@@ -453,7 +464,7 @@
         <!--JS-->
         <script src="js/scripts.js"></script>
     </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const st=[{code:"MBBM-P-DIP4-20",name:"programming",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]},{code:"hshsp-fjh-364",name:"jan",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]}];window.customElements.define("keuren-element",class extends X{constructor(){super()}connectedCallback(){super.connectedCallback()}static get styles(){return i`
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const at=[{code:"MBBM-P-DIP4-20",name:"programming",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]},{code:"hshsp-fjh-364",name:"jan",ec_course:5,tests:[{name:"Toets",weight:100,ec_test:5}]}];window.customElements.define("keuren-element",class extends X{constructor(){super()}connectedCallback(){super.connectedCallback()}static get styles(){return i`
             // #doos{
             //     background-color: green;
             // }
@@ -493,7 +504,7 @@
                   </tr>
                 </thead>
                 <tbody id="myTable">
-                    ${st.map((e=>P`
+                    ${at.map((e=>P`
                             <tr>
                                 <td id="code">${e.code}</td>
                                 <td id="name">${e.name}</td>
@@ -625,4 +636,4 @@
                 <script src="js/scripts.js"></script>
                 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             </body>
-        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const it=document.querySelector("#main"),ot=new Ye(it);ot.setRoutes([{path:"/",component:"home-table"},{path:"/cursus/:code",component:"cursus-div"},{path:"/vakAanpassen",component:"vak-aanpassen"},{path:"/voorstelBeoordelen",component:"voorstel-beoordelen"},{path:"/voorstelOverzicht",component:"voorstel-overzicht"},{path:"/keuren",component:"keuren-element"},{path:"/voorstellen",component:"voorstellen-element"},{path:"(.*)",component:""}])})();
+        `}_newEvent(e){this.dispatchEvent(new CustomEvent(e))}});const lt=document.querySelector("#main"),ct=new Ye(lt);ct.setRoutes([{path:"/",component:"home-table"},{path:"/cursus/:code",component:"cursus-div"},{path:"/vakAanpassen",component:"vak-aanpassen"},{path:"/voorstelBeoordelen",component:"voorstel-beoordelen"},{path:"/voorstelOverzicht",component:"voorstel-overzicht"},{path:"/keuren",component:"keuren-element"},{path:"/voorstellen",component:"voorstellen-element"},{path:"(.*)",component:""}])})();

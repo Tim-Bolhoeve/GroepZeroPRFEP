@@ -20,7 +20,7 @@ class voorstelBeoordelen extends LitElement {
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">
                             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-right-text-fill"></i></div>
-                            <h1 class="fw-bolder">Voorstel (id: <a href="#">0001</a>) beoordelen</h1>
+                            <h1 class="fw-bolder">Voorstel aanmaken</h1>
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
@@ -28,8 +28,14 @@ class voorstelBeoordelen extends LitElement {
                                 <form id="contactForm" method="#">
                                     
                                     <div class="form-floating mb-3">
+                                        <input readonly class="form-control" id="onderwerp" type="text" placeholder="Onderwerp" required />
+                                        <label for="onderwerp">Onderwerp</label>
+                                        <div class="invalid-feedback" data-sb-feedback="onderwerp:required">Een onderwerp is verplicht.</div>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
                                         <label for="beoordeelbericht"></label>
-                                        <textarea class="form-control" id="beoordeelbericht" type="text" placeholder="Voer je bericht in..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <textarea readonly class="form-control" id="bericht" type="text" style="height: 10rem" data-sb-validations="required"></textarea>
                                         <label for="message">Bericht</label>
                                         <div class="invalid-feedback" data-sb-feedback="message:required">Een bericht is verplicht.</div>
                                     </div>
