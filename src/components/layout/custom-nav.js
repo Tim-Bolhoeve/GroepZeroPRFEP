@@ -27,9 +27,7 @@ class CustomNav extends LitElement {
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/voorstellen">Nieuw vak voorstellen</a></li>
                         <li class="nav-item"><a class="nav-link" href="/keuren">Keuren</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/vakaanpassen">Vak aanpassen</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/voorstelbeoordelen">Voorstel beoordelen</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login/inloggen">Login</a></li>
                     </ul>
                 </div>
             </div>
