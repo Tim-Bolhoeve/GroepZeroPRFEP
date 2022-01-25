@@ -69,7 +69,11 @@ class keuren extends LitElement {
                                 <td>${vak.ec_test}</td>
                                 <td>
                                     <div class="button-box col-lg-12">
-                                        <button class="btn btn-primary btn-lg" onclick="goedkeuren()" type="submit">Goedkeuren</button>
+                                        <button @click=${() => {
+                                            if(this.disabled !== true) {
+                                                return this._newEvent('goedGekeurd')
+                                            }
+                                        }} class="btn btn-primary btn-lg" id="goedkeuren" type="submit">Goedkeuren</button>
                                         <button class="btn btn-dark btn-lg" id="afkeuren" type="submit">Afkeuren</button>
                                     </div>
                                 </td>              
