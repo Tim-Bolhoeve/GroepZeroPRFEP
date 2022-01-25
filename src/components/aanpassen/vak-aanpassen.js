@@ -7,6 +7,19 @@ class vakAanpassen extends LitElement {
         `;
     }
 
+    _fillForm() {
+        var bezemvak = JSON.parse(sessionStorage.getItem("bezemvak"));
+        
+        var code = JSON.stringify(bezemvak.code);
+        var name = JSON.stringify(bezemvak.name);
+        var ecc = JSON.stringify(bezemvak.ecc);
+        var toets = JSON.stringify(bezemvak.toets);
+        var weging = JSON.stringify(bezemvak.weging);
+        var ect = JSON.stringify(bezemvak.ect);
+
+        
+    }
+
     render() {
         return html`
         <script src="../components/keuren/button-event.js"></script>

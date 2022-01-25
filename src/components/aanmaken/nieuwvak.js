@@ -1,7 +1,7 @@
 const nieuwvak = [
     {
     "code": "MBBM-P-DIP4-20",
-    "name": "pogramming",
+    "name": "programming",
     "ec_course": 5,
     "tests":[
         {

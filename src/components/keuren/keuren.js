@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
 import { nieuwvak } from '../aanmaken/nieuwvak.js';
+// import { fillForm() } from '../aanpassen/vak-aanpassen.js';
 
 class keuren extends LitElement {
 
@@ -19,10 +20,22 @@ class keuren extends LitElement {
         `;
     }
 
-    _aanpassen() {
-        
-    }
+    _submitEdit() {
+        const code = this.shadowRoot.querySelector('#code');
+        const name = this.shadowRoot.querySelector('#name');
+        const ecc = this.shadowRoot.querySelector('#ec-c');
+        const toets = this.shadowRoot.querySelector('#toets');
+        const weging = this.shadowRoot.querySelector('#weging');
+        const ect = this.shadowRoot.querySelector('#ec-t');
 
+        const bezemvak = {code: code.value, name: name.value, ecc: ecc.value, toets: toets.value, weging: weging.value, ect: ect.value};
+        var bezemvakStr = JSON.stringify(bezemvak);
+        
+        sessionStorage.setItem("bezemvak", bezemvakStr);
+
+        window.location.href = "http://localhost:8080/vakaanpassen";
+        _fillForm();
+    }
 
     render() {
         
@@ -65,11 +78,11 @@ class keuren extends LitElement {
                     ${nieuwvak.map(vak => html`
                             <tr>
                                 <td id="code">${vak.code}</td>
-                                <td id="naam">${vak.name}</td>
-                                <td id="course">${vak.ec_course}</td>
-                                <td id="toetsV">${vak.tests[0].name}</td>
+                                <td id="name">${vak.name}</td>
+                                <td id="ec-c">${vak.ec_course}</td>
+                                <td id="toets">${vak.tests[0].name}</td>
                                 <td id="weging">${vak.tests[0].weight}</td>
-                                <td id="ecToets">${vak.tests[0].ec_test}</td>
+                                <td id="ec-t">${vak.tests[0].ec_test}</td>
                                 <td>
                                     <div class="button-box col-lg-12">
                                         <button class="btn btn-primary btn-lg" onclick="goedkeuren()" type="submit">Goedkeuren</button>
@@ -77,7 +90,7 @@ class keuren extends LitElement {
                                     </div>
                                 </td>
                                 <td>
-                                    <button class="btn btn-primary btn-lg" id="aanpasButton" @click=${() => this._aanpassen()} type="submit">Aanpassen</button>
+                                    <button class="btn btn-primary btn-lg" id="aanpasButton" @click=${() => this._submitEdit()} type="submit">Aanpassen</button>
                                 </td>
                             </tr>`)}
                 </tbody>
