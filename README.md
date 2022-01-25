@@ -13,9 +13,7 @@ De opdrachtgever wil een applicatie waarmee gezocht kan worden anar bezemvakken 
 <!-- [Google Docs (tijdelijk)](https://docs.google.com/document/d/1zn-6FsVegqmSoehHiirvQwHCXlp0TF0K_N_hO4k3t04/edit#) -->
 [Functioneel Ontwerp](./doc/index.md)
 <br>
-[Visie/Scope Document (Wordt Later toegevoegd)](#)
-
-[Wiki](https://github.com/Tim-Bolhoeve/GroepZeroPRFEP/wiki)
+[Visie/Scope Document](../../wiki)
 
 ## Project link
 [Project Website](https://groepzeroprfep.herokuapp.com/)
