@@ -15,8 +15,8 @@ router.setRoutes([
     {path: '/', component: 'home-table'},
     {path: '/:name', component: 'search-script'},
     {path: '/cursus/:code', component: 'cursus-div'},
-    {path: '/keuren', component: 'keuren-element'},
-    {path: '/voorstellen', component: 'voorstellen-element'},
+    {path: '/home/keuren', component: 'keuren-element'},
+    {path: '/home/voorstellen', component: 'voorstellen-element'},
     {path: '/login/inloggen', component: 'login-page'},
     {path: '(.*)', component: ''}
 ]);
